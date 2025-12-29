@@ -19,7 +19,7 @@
 
   // Light themes (left column)
   const LIGHT_THEMES = [
-    { id: null, name: "Default", icon: "○" },
+    { id: "snowwhite", name: "Snow White", icon: "❄️" },
     { id: "sepia", name: "Sepia", icon: "📜" },
     { id: "solarized", name: "Solarized", icon: "☀️" },
     { id: "gruvbox-light", name: "Gruvbox", icon: "🌻" },
@@ -48,7 +48,6 @@
   let menuOpen = false;
   let previewTheme = null;
   let currentFontIndex = 0;
-  let fontsLoaded = false;
 
   // Apply theme to DOM
   function applyThemeToDOM(themeId) {
@@ -120,17 +119,6 @@
     selectTheme(null);
   }
 
-  // Load Google Fonts
-  function loadGoogleFonts() {
-    if (fontsLoaded) return;
-    fontsLoaded = true;
-    
-    const link = document.createElement("link");
-    link.rel = "stylesheet";
-    link.href = "https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&family=Fira+Code:wght@400;500&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Lora:wght@400;500;600&family=Merriweather:wght@400;700&family=Open+Sans:wght@400;500;600&family=Playfair+Display:wght@400;500;600&family=Poppins:wght@400;500;600&family=Source+Code+Pro:wght@400;500&display=swap";
-    document.head.appendChild(link);
-  }
-
   // Apply font to page
   function applyFont(fontId) {
     const font = FONTS.find(f => f.id === fontId) || FONTS[0];
@@ -139,7 +127,6 @@
       document.documentElement.style.removeProperty("--custom-font-family");
       document.documentElement.removeAttribute("data-custom-font");
     } else {
-      loadGoogleFonts();
       document.documentElement.style.setProperty("--custom-font-family", font.family);
       document.documentElement.setAttribute("data-custom-font", fontId);
     }
@@ -180,9 +167,13 @@
     }
   }
 
+  // Default theme (not in columns, used for reset)
+  const DEFAULT_THEME = { id: null, name: "Default", icon: "○" };
+
   // Get theme data by ID
   function getThemeById(themeId) {
-    return ALL_THEMES.find((t) => t.id === themeId) || LIGHT_THEMES[0];
+    if (themeId === null) return DEFAULT_THEME;
+    return ALL_THEMES.find((t) => t.id === themeId) || DEFAULT_THEME;
   }
 
   // Get current theme data
@@ -472,11 +463,19 @@
     }
   }
 
-  // Apply theme immediately to prevent flash
-  chrome.storage.sync.get(["githubCustomTheme"], (result) => {
+  // Apply theme and font immediately to prevent flash
+  chrome.storage.sync.get(["githubCustomTheme", "githubCustomFont"], (result) => {
     if (result.githubCustomTheme) {
       savedTheme = result.githubCustomTheme;
       document.documentElement.setAttribute("data-custom-theme", result.githubCustomTheme);
+    }
+    if (result.githubCustomFont) {
+      const font = FONTS.find(f => f.id === result.githubCustomFont);
+      if (font) {
+        currentFontIndex = FONTS.indexOf(font);
+        document.documentElement.style.setProperty("--custom-font-family", font.family);
+        document.documentElement.setAttribute("data-custom-font", result.githubCustomFont);
+      }
     }
   });
 

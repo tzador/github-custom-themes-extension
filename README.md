@@ -6,7 +6,7 @@ A Chrome extension that adds **16 beautiful themes** to GitHub with hover previe
 
 | Light Themes | Dark Themes |
 |-------------|-------------|
-| ○ **Default** - GitHub's default | 🌅 **Solarized** - Ethan Schoonover's dark |
+| ❄️ **Snow White** - Pure crisp white | 🌅 **Solarized** - Ethan Schoonover's dark |
 | 📜 **Sepia** - Warm paper-like | 🍂 **Gruvbox** - Retro groove |
 | ☀️ **Solarized** - Ethan Schoonover's light | ❄️ **Nord** - Arctic blue |
 | 🌻 **Gruvbox** - Retro groove light | 🧛 **Dracula** - Dark theme for vampires |
@@ -19,11 +19,19 @@ A Chrome extension that adds **16 beautiful themes** to GitHub with hover previe
 
 - **Hover Preview** - See themes instantly by hovering over them
 - **Click to Select** - Click any theme to permanently apply it
-- **Default Button** - Quick reset to GitHub's default theme
+- **Font Switcher** - Cycle through 11 fonts including serif, sans-serif, and monospace options
 - **Dual Column Layout** - Light themes on white, dark themes on black
-- **Persistent** - Your choice is saved and syncs across devices
+- **Persistent** - Your theme and font choices sync across devices
 - **SPA Support** - Works with GitHub's client-side navigation
 - **Gist Support** - Also works on gist.github.com
+
+## 🔤 Available Fonts
+
+| Sans-Serif | Serif | Monospace | Other |
+|------------|-------|-----------|-------|
+| Inter | Playfair Display | JetBrains Mono | Comic Neue |
+| Open Sans | Merriweather | Fira Code | Default Font |
+| Poppins | Lora | Source Code Pro | |
 
 ## 📦 Installation
 
@@ -41,8 +49,9 @@ A Chrome extension that adds **16 beautiful themes** to GitHub with hover previe
 1. Navigate to any GitHub or Gist page
 2. Click the floating theme button in the bottom-right corner
 3. **Hover** over any theme to preview it
-4. **Click** to select and save a theme
-5. Use the **Default** button to reset
+4. **Click** a theme to select and save it
+5. Click the **font button** (top-left of menu) to cycle through fonts
+6. Use **Reset to Default** to restore GitHub's default theme
 
 ## 📝 License
 

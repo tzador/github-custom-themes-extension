@@ -1,0 +1,86 @@
+/*
+ * Snow White Theme - Pure, crisp white theme
+ */
+
+[data-custom-theme="snowwhite"],
+[data-custom-theme="snowwhite"] ::backdrop {
+  --bgColor-default: #ffffff !important;
+  --bgColor-muted: #f8f9fa !important;
+  --bgColor-inset: #ffffff !important;
+  --bgColor-emphasis: #4a5568 !important;
+  --bgColor-inverse: #2d3748 !important;
+  --bgColor-disabled: #edf2f7 !important;
+  --bgColor-transparent: #ffffff00 !important;
+
+  --bgColor-neutral-emphasis: #a0aec0 !important;
+  --bgColor-neutral-muted: #e2e8f01f !important;
+  --bgColor-accent-emphasis: #4299e1 !important;
+  --bgColor-accent-muted: #4299e126 !important;
+  --bgColor-success-emphasis: #48bb78 !important;
+  --bgColor-success-muted: #48bb7826 !important;
+  --bgColor-attention-emphasis: #ed8936 !important;
+  --bgColor-attention-muted: #ed893626 !important;
+  --bgColor-danger-emphasis: #fc8181 !important;
+  --bgColor-danger-muted: #fc818126 !important;
+  --bgColor-done-emphasis: #9f7aea !important;
+  --bgColor-done-muted: #9f7aea26 !important;
+
+  --fgColor-default: #2d3748 !important;
+  --fgColor-muted: #718096 !important;
+  --fgColor-onEmphasis: #ffffff !important;
+  --fgColor-disabled: #a0aec0 !important;
+  --fgColor-link: #3182ce !important;
+  --fgColor-accent: #3182ce !important;
+  --fgColor-success: #38a169 !important;
+  --fgColor-attention: #dd6b20 !important;
+  --fgColor-danger: #e53e3e !important;
+  --fgColor-done: #805ad5 !important;
+
+  --borderColor-default: #e2e8f0 !important;
+  --borderColor-muted: #edf2f780 !important;
+  --borderColor-emphasis: #a0aec0 !important;
+
+  --header-bgColor: #ffffff !important;
+  --header-fgColor-default: #2d3748 !important;
+
+  --button-default-bgColor-rest: #f7fafc !important;
+  --button-default-fgColor-rest: #2d3748 !important;
+  --button-primary-bgColor-rest: #4299e1 !important;
+  --button-primary-fgColor-rest: #ffffff !important;
+
+  --control-bgColor-rest: #f7fafc !important;
+  --control-fgColor-rest: #2d3748 !important;
+  --control-checked-bgColor-rest: #4299e1 !important;
+
+  --diffBlob-additionLine-bgColor: #48bb7826 !important;
+  --diffBlob-deletionLine-bgColor: #fc818126 !important;
+
+  --color-prettylights-syntax-comment: #a0aec0 !important;
+  --color-prettylights-syntax-constant: #9f7aea !important;
+  --color-prettylights-syntax-entity: #4299e1 !important;
+  --color-prettylights-syntax-keyword: #ed8936 !important;
+  --color-prettylights-syntax-string: #48bb78 !important;
+  --color-prettylights-syntax-variable: #e53e3e !important;
+
+  --codeMirror-bgColor: #ffffff !important;
+  --codeMirror-fgColor: #2d3748 !important;
+
+  --contribution-default-bgColor-0: #f7fafc !important;
+  --contribution-default-bgColor-1: #c6f6d5 !important;
+  --contribution-default-bgColor-2: #9ae6b4 !important;
+  --contribution-default-bgColor-3: #68d391 !important;
+  --contribution-default-bgColor-4: #48bb78 !important;
+
+  --card-bgColor: #ffffff !important;
+  --page-header-bgColor: #f7fafc !important;
+  --tooltip-bgColor: #2d3748 !important;
+  --tooltip-fgColor: #ffffff !important;
+  --overlay-bgColor: #ffffff !important;
+  --selection-bgColor: #4299e126 !important;
+  --focus-outlineColor: #4299e1 !important;
+}
+
+[data-custom-theme="snowwhite"] body {
+  background-color: #ffffff !important;
+  color: #2d3748 !important;
+}
