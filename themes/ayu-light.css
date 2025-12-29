@@ -1,0 +1,86 @@
+/*
+ * Ayu Light Theme - Modern minimal light theme
+ */
+
+[data-custom-theme="ayu-light"],
+[data-custom-theme="ayu-light"] ::backdrop {
+  --bgColor-default: #fafafa !important;
+  --bgColor-muted: #f3f4f5 !important;
+  --bgColor-inset: #ffffff !important;
+  --bgColor-emphasis: #5c6166 !important;
+  --bgColor-inverse: #5c6166 !important;
+  --bgColor-disabled: #e8e9eb !important;
+  --bgColor-transparent: #ffffff00 !important;
+
+  --bgColor-neutral-emphasis: #8a9199 !important;
+  --bgColor-neutral-muted: #8a91991f !important;
+  --bgColor-accent-emphasis: #399ee6 !important;
+  --bgColor-accent-muted: #399ee633 !important;
+  --bgColor-success-emphasis: #6cbf43 !important;
+  --bgColor-success-muted: #6cbf4333 !important;
+  --bgColor-attention-emphasis: #fa8d3e !important;
+  --bgColor-attention-muted: #fa8d3e33 !important;
+  --bgColor-danger-emphasis: #f07171 !important;
+  --bgColor-danger-muted: #f0717133 !important;
+  --bgColor-done-emphasis: #a37acc !important;
+  --bgColor-done-muted: #a37acc33 !important;
+
+  --fgColor-default: #5c6166 !important;
+  --fgColor-muted: #8a9199 !important;
+  --fgColor-onEmphasis: #fafafa !important;
+  --fgColor-disabled: #8a9199 !important;
+  --fgColor-link: #399ee6 !important;
+  --fgColor-accent: #399ee6 !important;
+  --fgColor-success: #6cbf43 !important;
+  --fgColor-attention: #fa8d3e !important;
+  --fgColor-danger: #f07171 !important;
+  --fgColor-done: #a37acc !important;
+
+  --borderColor-default: #e1e2e4 !important;
+  --borderColor-muted: #f3f4f5b3 !important;
+  --borderColor-emphasis: #8a9199 !important;
+
+  --header-bgColor: #5c6166 !important;
+  --header-fgColor-default: #fafafab3 !important;
+
+  --button-default-bgColor-rest: #f3f4f5 !important;
+  --button-default-fgColor-rest: #5c6166 !important;
+  --button-primary-bgColor-rest: #fa8d3e !important;
+  --button-primary-fgColor-rest: #fafafa !important;
+
+  --control-bgColor-rest: #f3f4f5 !important;
+  --control-fgColor-rest: #5c6166 !important;
+  --control-checked-bgColor-rest: #fa8d3e !important;
+
+  --diffBlob-additionLine-bgColor: #6cbf4333 !important;
+  --diffBlob-deletionLine-bgColor: #f0717133 !important;
+
+  --color-prettylights-syntax-comment: #8a9199 !important;
+  --color-prettylights-syntax-constant: #a37acc !important;
+  --color-prettylights-syntax-entity: #399ee6 !important;
+  --color-prettylights-syntax-keyword: #fa8d3e !important;
+  --color-prettylights-syntax-string: #86b300 !important;
+  --color-prettylights-syntax-variable: #f07171 !important;
+
+  --codeMirror-bgColor: #fafafa !important;
+  --codeMirror-fgColor: #5c6166 !important;
+
+  --contribution-default-bgColor-0: #f3f4f5 !important;
+  --contribution-default-bgColor-1: #e1e2e4 !important;
+  --contribution-default-bgColor-2: #86b300 !important;
+  --contribution-default-bgColor-3: #6cbf43 !important;
+  --contribution-default-bgColor-4: #4cbf99 !important;
+
+  --card-bgColor: #fafafa !important;
+  --page-header-bgColor: #f3f4f5 !important;
+  --tooltip-bgColor: #5c6166 !important;
+  --tooltip-fgColor: #fafafa !important;
+  --overlay-bgColor: #fafafa !important;
+  --selection-bgColor: #399ee633 !important;
+  --focus-outlineColor: #399ee6 !important;
+}
+
+[data-custom-theme="ayu-light"] body {
+  background-color: #fafafa !important;
+  color: #5c6166 !important;
+}

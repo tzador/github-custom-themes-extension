@@ -1,0 +1,207 @@
+/*
+ * GitHub Custom Themes - Toggle Button & Menu Styles
+ * Uses fixed styling that doesn't change with themes
+ */
+
+/* Toggle Button */
+#github-theme-toggle {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid #888;
+  background: linear-gradient(135deg, #ffffff 50%, #000000 50%);
+  color: #000;
+  font-size: 16px;
+  cursor: pointer;
+  z-index: 99999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.3);
+  transition: all 0.2s ease;
+  opacity: 0.9;
+  font-family: "Comic Sans MS", "Comic Sans", cursive;
+}
+
+#github-theme-toggle:hover {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+#github-theme-toggle .theme-icon {
+  line-height: 1;
+  text-shadow: 0 0 2px #fff, 0 0 2px #000;
+}
+
+/* Menu Popover - Fixed design for all themes */
+#github-theme-menu {
+  position: fixed;
+  bottom: 70px;
+  right: 20px;
+  width: 320px;
+  background: #808080;
+  border: 2px solid #444;
+  border-radius: 12px;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.5);
+  z-index: 99999;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(8px) scale(0.96);
+  transition: all 0.15s ease;
+  overflow: hidden;
+  font-family: "Comic Sans MS", "Comic Sans", cursive;
+}
+
+#github-theme-menu.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0) scale(1);
+}
+
+/* Header */
+.theme-menu-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 12px;
+  background: #555;
+  border-bottom: 2px solid #444;
+}
+
+.theme-menu-title {
+  font-size: 13px;
+  font-weight: bold;
+  color: #fff;
+  text-shadow: 1px 1px 0 #000;
+}
+
+.theme-reset-btn {
+  padding: 4px 10px;
+  border: 1px solid #333;
+  background: #888;
+  color: #fff;
+  border-radius: 4px;
+  font-size: 11px;
+  font-weight: bold;
+  cursor: pointer;
+  font-family: "Comic Sans MS", "Comic Sans", cursive;
+  transition: all 0.1s ease;
+  text-shadow: 1px 1px 0 #000;
+}
+
+.theme-reset-btn:hover {
+  background: #999;
+}
+
+/* Theme Columns */
+.theme-columns {
+  display: flex;
+}
+
+.theme-column {
+  flex: 1;
+  padding: 8px;
+}
+
+.light-column {
+  background: #ffffff;
+}
+
+.dark-column {
+  background: #000000;
+}
+
+.theme-col-label {
+  font-size: 10px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 4px 8px;
+  margin-bottom: 4px;
+}
+
+.light-column .theme-col-label {
+  color: #333;
+}
+
+.dark-column .theme-col-label {
+  color: #ccc;
+}
+
+/* Theme Items */
+.theme-menu-item {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 6px 8px;
+  border: none;
+  background: transparent;
+  font-size: 11px;
+  cursor: pointer;
+  transition: all 0.1s ease;
+  font-family: "Comic Sans MS", "Comic Sans", cursive;
+  text-align: left;
+  gap: 6px;
+  border-radius: 4px;
+  margin-bottom: 2px;
+}
+
+.light-item {
+  color: #000;
+}
+
+.dark-item {
+  color: #fff;
+}
+
+.light-item:hover {
+  background: #e0e0e0;
+}
+
+.dark-item:hover {
+  background: #333;
+}
+
+.light-item.selected {
+  background: #d0d0d0;
+}
+
+.dark-item.selected {
+  background: #444;
+}
+
+.theme-menu-icon {
+  font-size: 12px;
+  width: 18px;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.theme-menu-name {
+  flex: 1;
+  font-weight: 500;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.theme-menu-check {
+  font-size: 10px;
+  opacity: 0;
+  flex-shrink: 0;
+}
+
+.light-item .theme-menu-check {
+  color: #2da44e;
+}
+
+.dark-item .theme-menu-check {
+  color: #3fb950;
+}
+
+.theme-menu-item.selected .theme-menu-check {
+  opacity: 1;
+}

@@ -1,0 +1,333 @@
+/*
+ * Nord Theme - Arctic, north-bluish clean aesthetic
+ * Using Tailwind slate/sky/cyan color palette
+ */
+
+[data-custom-theme="nord"],
+[data-custom-theme="nord"] ::backdrop {
+  /* Nord polar night base */
+  --bgColor-default: #2e3440 !important;
+  --bgColor-muted: #3b4252 !important;
+  --bgColor-inset: #272c36 !important;
+  --bgColor-emphasis: #eceff4 !important;
+  --bgColor-inverse: #eceff4 !important;
+  --bgColor-disabled: #434c5e !important;
+  --bgColor-transparent: #ffffff00 !important;
+
+  /* Neutral backgrounds */
+  --bgColor-neutral-emphasis: #4c566a !important;
+  --bgColor-neutral-muted: #d8dee91f !important;
+
+  /* Accent colors - frost blue */
+  --bgColor-accent-emphasis: #5e81ac !important;
+  --bgColor-accent-muted: #5e81ac33 !important;
+
+  /* Status colors - nord aurora */
+  --bgColor-success-emphasis: #a3be8c !important;
+  --bgColor-success-muted: #a3be8c33 !important;
+  --bgColor-attention-emphasis: #ebcb8b !important;
+  --bgColor-attention-muted: #ebcb8b33 !important;
+  --bgColor-danger-emphasis: #bf616a !important;
+  --bgColor-danger-muted: #bf616a33 !important;
+  --bgColor-done-emphasis: #b48ead !important;
+  --bgColor-done-muted: #b48ead33 !important;
+  --bgColor-sponsors-emphasis: #b48ead !important;
+  --bgColor-sponsors-muted: #b48ead33 !important;
+  --bgColor-severe-emphasis: #d08770 !important;
+  --bgColor-severe-muted: #d0877033 !important;
+  --bgColor-open-emphasis: #a3be8c !important;
+  --bgColor-open-muted: #a3be8c33 !important;
+
+  /* Foreground colors - snow storm */
+  --fgColor-default: #eceff4 !important;
+  --fgColor-muted: #d8dee9 !important;
+  --fgColor-onEmphasis: #2e3440 !important;
+  --fgColor-onInverse: #2e3440 !important;
+  --fgColor-disabled: #4c566a !important;
+  --fgColor-link: #88c0d0 !important;
+  --fgColor-neutral: #d8dee9 !important;
+  --fgColor-accent: #88c0d0 !important;
+  --fgColor-success: #a3be8c !important;
+  --fgColor-attention: #ebcb8b !important;
+  --fgColor-danger: #bf616a !important;
+  --fgColor-done: #b48ead !important;
+  --fgColor-sponsors: #b48ead !important;
+  --fgColor-severe: #d08770 !important;
+  --fgColor-open: #a3be8c !important;
+
+  /* Border colors */
+  --borderColor-default: #4c566a !important;
+  --borderColor-muted: #434c5eb3 !important;
+  --borderColor-emphasis: #d8dee9 !important;
+  --borderColor-disabled: #4c566a26 !important;
+  --borderColor-transparent: #ffffff00 !important;
+  --borderColor-translucent: #eceff426 !important;
+  --borderColor-neutral-emphasis: #4c566a !important;
+  --borderColor-accent-emphasis: #5e81ac !important;
+  --borderColor-accent-muted: #5e81ac66 !important;
+  --borderColor-success-emphasis: #a3be8c !important;
+  --borderColor-success-muted: #a3be8c66 !important;
+  --borderColor-attention-emphasis: #ebcb8b !important;
+  --borderColor-attention-muted: #ebcb8b66 !important;
+  --borderColor-danger-emphasis: #bf616a !important;
+  --borderColor-danger-muted: #bf616a66 !important;
+  --borderColor-done-emphasis: #b48ead !important;
+  --borderColor-done-muted: #b48ead66 !important;
+  --borderColor-sponsors-emphasis: #b48ead !important;
+  --borderColor-sponsors-muted: #b48ead66 !important;
+  --borderColor-severe-emphasis: #d08770 !important;
+  --borderColor-severe-muted: #d0877066 !important;
+  --borderColor-open-emphasis: #a3be8c !important;
+  --borderColor-open-muted: #a3be8c66 !important;
+
+  /* Canvas colors */
+  --color-canvas-default: #2e3440 !important;
+  --color-canvas-subtle: #3b4252 !important;
+  --color-canvas-inset: #272c36 !important;
+  --color-canvas-overlay: #2e3440 !important;
+
+  /* Header */
+  --header-bgColor: #242933 !important;
+  --header-fgColor-default: #eceff4b3 !important;
+  --header-fgColor-logo: #eceff4 !important;
+  --header-borderColor-divider: #4c566a !important;
+  --headerSearch-bgColor: #242933 !important;
+  --headerSearch-borderColor: #4c566a !important;
+
+  /* Buttons */
+  --button-default-bgColor-rest: #3b4252 !important;
+  --button-default-bgColor-hover: #434c5e !important;
+  --button-default-bgColor-active: #4c566a !important;
+  --button-default-fgColor-rest: #eceff4 !important;
+  --button-default-shadow-resting: 0px 1px 0px 0px #0000000a !important;
+  --button-primary-bgColor-rest: #5e81ac !important;
+  --button-primary-bgColor-hover: #81a1c1 !important;
+  --button-primary-bgColor-active: #88c0d0 !important;
+  --button-primary-fgColor-rest: #2e3440 !important;
+  --button-primary-borderColor-rest: #eceff426 !important;
+  --button-danger-bgColor-rest: #3b4252 !important;
+  --button-danger-bgColor-hover: #bf616a !important;
+  --button-danger-fgColor-rest: #bf616a !important;
+  --button-danger-fgColor-hover: #2e3440 !important;
+  --button-outline-bgColor-rest: #3b4252 !important;
+  --button-outline-bgColor-hover: #5e81ac !important;
+  --button-outline-fgColor-rest: #88c0d0 !important;
+  --button-outline-fgColor-hover: #2e3440 !important;
+  --button-invisible-bgColor-rest: #ffffff00 !important;
+  --button-invisible-bgColor-hover: #d8dee91a !important;
+  --button-invisible-bgColor-active: #d8dee926 !important;
+  --button-inactive-bgColor: #434c5e !important;
+  --button-inactive-fgColor: #4c566a !important;
+
+  /* Controls */
+  --control-bgColor-rest: #3b4252 !important;
+  --control-bgColor-hover: #434c5e !important;
+  --control-bgColor-active: #4c566a !important;
+  --control-bgColor-disabled: #434c5e !important;
+  --control-fgColor-rest: #eceff4 !important;
+  --control-fgColor-disabled: #4c566a !important;
+  --control-borderColor-rest: #4c566a !important;
+  --control-borderColor-emphasis: #d8dee9 !important;
+  --control-checked-bgColor-rest: #5e81ac !important;
+  --control-checked-bgColor-hover: #81a1c1 !important;
+  --control-transparent-bgColor-rest: #ffffff00 !important;
+  --control-transparent-bgColor-hover: #d8dee91a !important;
+  --control-transparent-bgColor-active: #d8dee926 !important;
+
+  /* Counter */
+  --counter-bgColor-emphasis: #4c566a !important;
+  --counter-bgColor-muted: #d8dee91f !important;
+  --counter-borderColor: #ffffff00 !important;
+
+  /* Avatar */
+  --avatar-bgColor: #2e3440 !important;
+  --avatar-borderColor: #eceff426 !important;
+  --avatar-shadow: 0px 0px 0px 2px #2e3440cc !important;
+  --avatarStack-fade-bgColor-default: #4c566a !important;
+  --avatarStack-fade-bgColor-muted: #434c5e !important;
+
+  /* Timeline */
+  --timelineBadge-bgColor: #3b4252 !important;
+
+  /* Tooltip */
+  --tooltip-bgColor: #eceff4 !important;
+  --tooltip-fgColor: #2e3440 !important;
+
+  /* Overlay */
+  --overlay-bgColor: #2e3440 !important;
+  --overlay-borderColor: #4c566a80 !important;
+  --overlay-backdrop-bgColor: #00000066 !important;
+
+  /* Selection */
+  --selection-bgColor: #5e81ac33 !important;
+
+  /* Skeleton loader */
+  --skeletonLoader-bgColor: #d8dee91a !important;
+
+  /* Focus */
+  --focus-outlineColor: #88c0d0 !important;
+  --focus-outline: 2px solid #88c0d0 !important;
+
+  /* Shadow */
+  --shadow-inset: inset 0px 1px 0px 0px #0000000a !important;
+  --shadow-resting-xsmall: 0px 1px 1px 0px #0000000f !important;
+  --shadow-resting-small: 0px 1px 1px 0px #0000000f, 0px 1px 3px 0px #0000000f !important;
+  --shadow-resting-medium: 0px 1px 1px 0px #0000001a, 0px 3px 6px 0px #0000001f !important;
+  --shadow-floating-small: 0px 0px 0px 1px #4c566a80, 0px 6px 12px -3px #0000000a, 0px 6px 18px 0px #0000001f !important;
+  --shadow-floating-medium: 0px 0px 0px 1px #4c566a, 0px 8px 16px -4px #00000014, 0px 4px 32px -4px #00000014, 0px 24px 48px -12px #00000014, 0px 48px 96px -24px #00000014 !important;
+  --shadow-floating-large: 0px 0px 0px 1px #4c566a, 0px 40px 80px 0px #0000003d !important;
+  --shadow-floating-xlarge: 0px 0px 0px 1px #4c566a, 0px 56px 112px 0px #00000052 !important;
+  --shadow-floating-legacy: 0px 6px 12px -3px #0000000a, 0px 6px 18px 0px #0000001f !important;
+
+  /* Diff */
+  --diffBlob-additionLine-bgColor: #a3be8c33 !important;
+  --diffBlob-additionWord-bgColor: #a3be8c66 !important;
+  --diffBlob-additionNum-bgColor: #a3be8c66 !important;
+  --diffBlob-deletionLine-bgColor: #bf616a33 !important;
+  --diffBlob-deletionWord-bgColor: #bf616a66 !important;
+  --diffBlob-deletionNum-bgColor: #bf616a66 !important;
+  --diffBlob-hunkLine-bgColor: #3b4252 !important;
+  --diffBlob-hunkNum-bgColor-rest: #434c5e !important;
+  --diffBlob-hunkNum-bgColor-hover: #4c566a !important;
+  --diffBlob-emptyLine-bgColor: #3b4252 !important;
+  --diffBlob-emptyNum-bgColor: #3b4252 !important;
+  --diffBlob-expander-iconColor: #d8dee9 !important;
+  --diffBlob-hunkLine-fgColor: #d8dee9 !important;
+
+  /* Underline Nav */
+  --underlineNav-borderColor-active: #88c0d0 !important;
+  --underlineNav-borderColor-hover: #4c566ab3 !important;
+  --underlineNav-iconColor-rest: #d8dee9 !important;
+
+  /* Code syntax - nord colors */
+  --color-prettylights-syntax-comment: #616e88 !important;
+  --color-prettylights-syntax-constant: #b48ead !important;
+  --color-prettylights-syntax-entity: #88c0d0 !important;
+  --color-prettylights-syntax-storage-modifier-import: #eceff4 !important;
+  --color-prettylights-syntax-entity-tag: #81a1c1 !important;
+  --color-prettylights-syntax-keyword: #81a1c1 !important;
+  --color-prettylights-syntax-string: #a3be8c !important;
+  --color-prettylights-syntax-variable: #d8dee9 !important;
+  --color-prettylights-syntax-brackethighlighter-unmatched: #bf616a !important;
+  --color-prettylights-syntax-invalid-illegal-text: #bf616a !important;
+  --color-prettylights-syntax-invalid-illegal-bg: #bf616a33 !important;
+  --color-prettylights-syntax-carriage-return-text: #2e3440 !important;
+  --color-prettylights-syntax-carriage-return-bg: #bf616a !important;
+  --color-prettylights-syntax-string-regexp: #8fbcbb !important;
+  --color-prettylights-syntax-markup-list: #d08770 !important;
+  --color-prettylights-syntax-markup-heading: #81a1c1 !important;
+  --color-prettylights-syntax-markup-italic: #eceff4 !important;
+  --color-prettylights-syntax-markup-bold: #eceff4 !important;
+  --color-prettylights-syntax-markup-deleted-text: #bf616a !important;
+  --color-prettylights-syntax-markup-deleted-bg: #bf616a33 !important;
+  --color-prettylights-syntax-markup-inserted-text: #a3be8c !important;
+  --color-prettylights-syntax-markup-inserted-bg: #a3be8c33 !important;
+  --color-prettylights-syntax-markup-changed-text: #ebcb8b !important;
+  --color-prettylights-syntax-markup-changed-bg: #ebcb8b33 !important;
+  --color-prettylights-syntax-markup-ignored-text: #4c566a !important;
+  --color-prettylights-syntax-markup-ignored-bg: #5e81ac !important;
+  --color-prettylights-syntax-meta-diff-range: #b48ead !important;
+  --color-prettylights-syntax-brackethighlighter-angle: #616e88 !important;
+  --color-prettylights-syntax-sublimelinter-gutter-mark: #4c566a !important;
+  --color-prettylights-syntax-constant-other-reference-link: #a3be8c !important;
+
+  /* ANSI colors - nord */
+  --color-ansi-black: #3b4252 !important;
+  --color-ansi-black-bright: #4c566a !important;
+  --color-ansi-white: #d8dee9 !important;
+  --color-ansi-white-bright: #eceff4 !important;
+  --color-ansi-gray: #4c566a !important;
+  --color-ansi-red: #bf616a !important;
+  --color-ansi-red-bright: #d08770 !important;
+  --color-ansi-green: #a3be8c !important;
+  --color-ansi-green-bright: #8fbcbb !important;
+  --color-ansi-yellow: #ebcb8b !important;
+  --color-ansi-yellow-bright: #d08770 !important;
+  --color-ansi-blue: #5e81ac !important;
+  --color-ansi-blue-bright: #81a1c1 !important;
+  --color-ansi-magenta: #b48ead !important;
+  --color-ansi-magenta-bright: #b48ead !important;
+  --color-ansi-cyan: #88c0d0 !important;
+  --color-ansi-cyan-bright: #8fbcbb !important;
+
+  /* CodeMirror */
+  --codeMirror-bgColor: #2e3440 !important;
+  --codeMirror-fgColor: #eceff4 !important;
+  --codeMirror-gutters-bgColor: #2e3440 !important;
+  --codeMirror-cursor-fgColor: #eceff4 !important;
+  --codeMirror-selection-bgColor: #5e81ac66 !important;
+  --codeMirror-activeline-bgColor: #d8dee91f !important;
+  --codeMirror-matchingBracket-fgColor: #eceff4 !important;
+  --codeMirror-lineNumber-fgColor: #d8dee9 !important;
+  --codeMirror-gutterMarker-fgColor-default: #2e3440 !important;
+  --codeMirror-gutterMarker-fgColor-muted: #d8dee9 !important;
+  --codeMirror-lines-bgColor: #2e3440 !important;
+  --codeMirror-syntax-fgColor-comment: #616e88 !important;
+  --codeMirror-syntax-fgColor-constant: #b48ead !important;
+  --codeMirror-syntax-fgColor-entity: #88c0d0 !important;
+  --codeMirror-syntax-fgColor-keyword: #81a1c1 !important;
+  --codeMirror-syntax-fgColor-storage: #81a1c1 !important;
+  --codeMirror-syntax-fgColor-string: #a3be8c !important;
+  --codeMirror-syntax-fgColor-support: #88c0d0 !important;
+  --codeMirror-syntax-fgColor-variable: #d8dee9 !important;
+
+  /* Contribution graph */
+  --contribution-default-bgColor-0: #3b4252 !important;
+  --contribution-default-bgColor-1: #5e81ac !important;
+  --contribution-default-bgColor-2: #81a1c1 !important;
+  --contribution-default-bgColor-3: #88c0d0 !important;
+  --contribution-default-bgColor-4: #8fbcbb !important;
+  --contribution-default-borderColor-0: #eceff40d !important;
+
+  /* Topic tag */
+  --topicTag-borderColor: #ffffff00 !important;
+
+  /* Tree view */
+  --treeViewItem-leadingVisual-iconColor-rest: #88c0d0 !important;
+
+  /* Highlight */
+  --highlight-neutral-bgColor: #ebcb8b33 !important;
+
+  /* Reaction button */
+  --reactionButton-selected-bgColor-rest: #5e81ac33 !important;
+  --reactionButton-selected-bgColor-hover: #5e81ac66 !important;
+  --reactionButton-selected-fgColor-rest: #88c0d0 !important;
+  --reactionButton-selected-fgColor-hover: #8fbcbb !important;
+
+  /* Select menu */
+  --selectMenu-bgColor-active: #5e81ac66 !important;
+  --selectMenu-borderColor: #ffffff00 !important;
+
+  /* Side nav */
+  --sideNav-bgColor-selected: #2e3440 !important;
+
+  /* Menu */
+  --menu-bgColor-active: #ffffff00 !important;
+
+  /* Progress bar */
+  --progressBar-bgColor-accent: #5e81ac !important;
+  --progressBar-bgColor-success: #a3be8c !important;
+  --progressBar-bgColor-attention: #ebcb8b !important;
+  --progressBar-bgColor-danger: #bf616a !important;
+  --progressBar-bgColor-done: #b48ead !important;
+  --progressBar-bgColor-severe: #d08770 !important;
+  --progressBar-bgColor-sponsors: #b48ead !important;
+  --progressBar-bgColor-neutral: #4c566a !important;
+  --progressBar-track-bgColor: #4c566a !important;
+  --progressBar-track-borderColor: #ffffff00 !important;
+
+  /* Page header */
+  --page-header-bgColor: #3b4252 !important;
+
+  /* Card */
+  --card-bgColor: #2e3440 !important;
+
+  /* Dashboard */
+  --dashboard-bgColor: #2e3440 !important;
+}
+
+/* Force body background */
+[data-custom-theme="nord"] body {
+  background-color: #2e3440 !important;
+  color: #eceff4 !important;
+}

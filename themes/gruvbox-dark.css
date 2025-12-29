@@ -1,0 +1,92 @@
+/*
+ * Gruvbox Dark Theme - Retro groove color scheme
+ */
+
+[data-custom-theme="gruvbox-dark"],
+[data-custom-theme="gruvbox-dark"] ::backdrop {
+  --bgColor-default: #282828 !important;
+  --bgColor-muted: #3c3836 !important;
+  --bgColor-inset: #1d2021 !important;
+  --bgColor-emphasis: #ebdbb2 !important;
+  --bgColor-inverse: #ebdbb2 !important;
+  --bgColor-disabled: #504945 !important;
+  --bgColor-transparent: #ffffff00 !important;
+
+  --bgColor-neutral-emphasis: #928374 !important;
+  --bgColor-neutral-muted: #9283741f !important;
+  --bgColor-accent-emphasis: #83a598 !important;
+  --bgColor-accent-muted: #83a59833 !important;
+  --bgColor-success-emphasis: #b8bb26 !important;
+  --bgColor-success-muted: #b8bb2633 !important;
+  --bgColor-attention-emphasis: #fabd2f !important;
+  --bgColor-attention-muted: #fabd2f33 !important;
+  --bgColor-danger-emphasis: #fb4934 !important;
+  --bgColor-danger-muted: #fb493433 !important;
+  --bgColor-done-emphasis: #d3869b !important;
+  --bgColor-done-muted: #d3869b33 !important;
+  --bgColor-sponsors-emphasis: #d3869b !important;
+  --bgColor-severe-emphasis: #fe8019 !important;
+  --bgColor-open-emphasis: #b8bb26 !important;
+
+  --fgColor-default: #ebdbb2 !important;
+  --fgColor-muted: #a89984 !important;
+  --fgColor-onEmphasis: #282828 !important;
+  --fgColor-disabled: #928374 !important;
+  --fgColor-link: #83a598 !important;
+  --fgColor-accent: #83a598 !important;
+  --fgColor-success: #b8bb26 !important;
+  --fgColor-attention: #fabd2f !important;
+  --fgColor-danger: #fb4934 !important;
+  --fgColor-done: #d3869b !important;
+
+  --borderColor-default: #504945 !important;
+  --borderColor-muted: #3c3836b3 !important;
+  --borderColor-emphasis: #928374 !important;
+  --borderColor-accent-emphasis: #83a598 !important;
+  --borderColor-success-emphasis: #b8bb26 !important;
+  --borderColor-danger-emphasis: #fb4934 !important;
+
+  --header-bgColor: #1d2021 !important;
+  --header-fgColor-default: #ebdbb2b3 !important;
+
+  --button-default-bgColor-rest: #3c3836 !important;
+  --button-default-fgColor-rest: #ebdbb2 !important;
+  --button-primary-bgColor-rest: #83a598 !important;
+  --button-primary-fgColor-rest: #282828 !important;
+
+  --control-bgColor-rest: #3c3836 !important;
+  --control-fgColor-rest: #ebdbb2 !important;
+  --control-checked-bgColor-rest: #83a598 !important;
+
+  --diffBlob-additionLine-bgColor: #b8bb2633 !important;
+  --diffBlob-deletionLine-bgColor: #fb493433 !important;
+
+  --color-prettylights-syntax-comment: #928374 !important;
+  --color-prettylights-syntax-constant: #d3869b !important;
+  --color-prettylights-syntax-entity: #83a598 !important;
+  --color-prettylights-syntax-keyword: #fb4934 !important;
+  --color-prettylights-syntax-string: #b8bb26 !important;
+  --color-prettylights-syntax-variable: #fe8019 !important;
+
+  --codeMirror-bgColor: #282828 !important;
+  --codeMirror-fgColor: #ebdbb2 !important;
+
+  --contribution-default-bgColor-0: #3c3836 !important;
+  --contribution-default-bgColor-1: #504945 !important;
+  --contribution-default-bgColor-2: #928374 !important;
+  --contribution-default-bgColor-3: #b8bb26 !important;
+  --contribution-default-bgColor-4: #fabd2f !important;
+
+  --card-bgColor: #282828 !important;
+  --page-header-bgColor: #3c3836 !important;
+  --tooltip-bgColor: #ebdbb2 !important;
+  --tooltip-fgColor: #282828 !important;
+  --overlay-bgColor: #282828 !important;
+  --selection-bgColor: #83a59833 !important;
+  --focus-outlineColor: #83a598 !important;
+}
+
+[data-custom-theme="gruvbox-dark"] body {
+  background-color: #282828 !important;
+  color: #ebdbb2 !important;
+}

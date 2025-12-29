@@ -1,0 +1,169 @@
+/*
+ * Dracula Theme - Classic dark purple theme
+ * Using official Dracula color palette
+ */
+
+[data-custom-theme="dracula"],
+[data-custom-theme="dracula"] ::backdrop {
+  --bgColor-default: #282a36 !important;
+  --bgColor-muted: #343746 !important;
+  --bgColor-inset: #21222c !important;
+  --bgColor-emphasis: #f8f8f2 !important;
+  --bgColor-inverse: #f8f8f2 !important;
+  --bgColor-disabled: #44475a !important;
+  --bgColor-transparent: #ffffff00 !important;
+
+  --bgColor-neutral-emphasis: #6272a4 !important;
+  --bgColor-neutral-muted: #6272a41f !important;
+  --bgColor-accent-emphasis: #bd93f9 !important;
+  --bgColor-accent-muted: #bd93f933 !important;
+  --bgColor-success-emphasis: #50fa7b !important;
+  --bgColor-success-muted: #50fa7b33 !important;
+  --bgColor-attention-emphasis: #f1fa8c !important;
+  --bgColor-attention-muted: #f1fa8c33 !important;
+  --bgColor-danger-emphasis: #ff5555 !important;
+  --bgColor-danger-muted: #ff555533 !important;
+  --bgColor-done-emphasis: #bd93f9 !important;
+  --bgColor-done-muted: #bd93f933 !important;
+  --bgColor-sponsors-emphasis: #ff79c6 !important;
+  --bgColor-sponsors-muted: #ff79c633 !important;
+  --bgColor-severe-emphasis: #ffb86c !important;
+  --bgColor-severe-muted: #ffb86c33 !important;
+  --bgColor-open-emphasis: #50fa7b !important;
+  --bgColor-open-muted: #50fa7b33 !important;
+
+  --fgColor-default: #f8f8f2 !important;
+  --fgColor-muted: #6272a4 !important;
+  --fgColor-onEmphasis: #282a36 !important;
+  --fgColor-onInverse: #282a36 !important;
+  --fgColor-disabled: #6272a4 !important;
+  --fgColor-link: #8be9fd !important;
+  --fgColor-neutral: #6272a4 !important;
+  --fgColor-accent: #bd93f9 !important;
+  --fgColor-success: #50fa7b !important;
+  --fgColor-attention: #f1fa8c !important;
+  --fgColor-danger: #ff5555 !important;
+  --fgColor-done: #bd93f9 !important;
+  --fgColor-sponsors: #ff79c6 !important;
+  --fgColor-severe: #ffb86c !important;
+  --fgColor-open: #50fa7b !important;
+
+  --borderColor-default: #44475a !important;
+  --borderColor-muted: #44475ab3 !important;
+  --borderColor-emphasis: #6272a4 !important;
+  --borderColor-disabled: #44475a26 !important;
+  --borderColor-transparent: #ffffff00 !important;
+  --borderColor-translucent: #f8f8f226 !important;
+  --borderColor-neutral-emphasis: #6272a4 !important;
+  --borderColor-accent-emphasis: #bd93f9 !important;
+  --borderColor-accent-muted: #bd93f966 !important;
+  --borderColor-success-emphasis: #50fa7b !important;
+  --borderColor-success-muted: #50fa7b66 !important;
+  --borderColor-attention-emphasis: #f1fa8c !important;
+  --borderColor-attention-muted: #f1fa8c66 !important;
+  --borderColor-danger-emphasis: #ff5555 !important;
+  --borderColor-danger-muted: #ff555566 !important;
+  --borderColor-done-emphasis: #bd93f9 !important;
+  --borderColor-done-muted: #bd93f966 !important;
+  --borderColor-sponsors-emphasis: #ff79c6 !important;
+  --borderColor-sponsors-muted: #ff79c666 !important;
+  --borderColor-severe-emphasis: #ffb86c !important;
+  --borderColor-severe-muted: #ffb86c66 !important;
+  --borderColor-open-emphasis: #50fa7b !important;
+  --borderColor-open-muted: #50fa7b66 !important;
+
+  --color-canvas-default: #282a36 !important;
+  --color-canvas-subtle: #343746 !important;
+  --color-canvas-inset: #21222c !important;
+  --color-canvas-overlay: #282a36 !important;
+
+  --header-bgColor: #21222c !important;
+  --header-fgColor-default: #f8f8f2b3 !important;
+  --header-fgColor-logo: #f8f8f2 !important;
+  --header-borderColor-divider: #44475a !important;
+  --headerSearch-bgColor: #21222c !important;
+  --headerSearch-borderColor: #44475a !important;
+
+  --button-default-bgColor-rest: #343746 !important;
+  --button-default-bgColor-hover: #44475a !important;
+  --button-default-bgColor-active: #6272a4 !important;
+  --button-default-fgColor-rest: #f8f8f2 !important;
+  --button-primary-bgColor-rest: #bd93f9 !important;
+  --button-primary-bgColor-hover: #caa8fb !important;
+  --button-primary-bgColor-active: #d8bdfc !important;
+  --button-primary-fgColor-rest: #282a36 !important;
+  --button-danger-bgColor-rest: #343746 !important;
+  --button-danger-bgColor-hover: #ff5555 !important;
+  --button-danger-fgColor-rest: #ff5555 !important;
+  --button-danger-fgColor-hover: #282a36 !important;
+  --button-outline-bgColor-rest: #343746 !important;
+  --button-outline-bgColor-hover: #bd93f9 !important;
+  --button-outline-fgColor-rest: #bd93f9 !important;
+  --button-outline-fgColor-hover: #282a36 !important;
+
+  --control-bgColor-rest: #343746 !important;
+  --control-bgColor-hover: #44475a !important;
+  --control-bgColor-active: #6272a4 !important;
+  --control-fgColor-rest: #f8f8f2 !important;
+  --control-borderColor-rest: #44475a !important;
+  --control-checked-bgColor-rest: #bd93f9 !important;
+
+  --avatar-bgColor: #282a36 !important;
+  --avatar-borderColor: #f8f8f226 !important;
+  --tooltip-bgColor: #f8f8f2 !important;
+  --tooltip-fgColor: #282a36 !important;
+  --overlay-bgColor: #282a36 !important;
+  --overlay-borderColor: #44475a80 !important;
+  --selection-bgColor: #bd93f933 !important;
+  --focus-outlineColor: #8be9fd !important;
+  --focus-outline: 2px solid #8be9fd !important;
+
+  --diffBlob-additionLine-bgColor: #50fa7b33 !important;
+  --diffBlob-additionWord-bgColor: #50fa7b66 !important;
+  --diffBlob-deletionLine-bgColor: #ff555533 !important;
+  --diffBlob-deletionWord-bgColor: #ff555566 !important;
+  --diffBlob-hunkLine-bgColor: #343746 !important;
+
+  --color-prettylights-syntax-comment: #6272a4 !important;
+  --color-prettylights-syntax-constant: #bd93f9 !important;
+  --color-prettylights-syntax-entity: #8be9fd !important;
+  --color-prettylights-syntax-storage-modifier-import: #f8f8f2 !important;
+  --color-prettylights-syntax-entity-tag: #ff79c6 !important;
+  --color-prettylights-syntax-keyword: #ff79c6 !important;
+  --color-prettylights-syntax-string: #f1fa8c !important;
+  --color-prettylights-syntax-variable: #ffb86c !important;
+  --color-prettylights-syntax-markup-heading: #bd93f9 !important;
+
+  --color-ansi-black: #21222c !important;
+  --color-ansi-red: #ff5555 !important;
+  --color-ansi-green: #50fa7b !important;
+  --color-ansi-yellow: #f1fa8c !important;
+  --color-ansi-blue: #bd93f9 !important;
+  --color-ansi-magenta: #ff79c6 !important;
+  --color-ansi-cyan: #8be9fd !important;
+  --color-ansi-white: #f8f8f2 !important;
+
+  --codeMirror-bgColor: #282a36 !important;
+  --codeMirror-fgColor: #f8f8f2 !important;
+  --codeMirror-syntax-fgColor-comment: #6272a4 !important;
+  --codeMirror-syntax-fgColor-constant: #bd93f9 !important;
+  --codeMirror-syntax-fgColor-keyword: #ff79c6 !important;
+  --codeMirror-syntax-fgColor-string: #f1fa8c !important;
+
+  --contribution-default-bgColor-0: #343746 !important;
+  --contribution-default-bgColor-1: #44475a !important;
+  --contribution-default-bgColor-2: #6272a4 !important;
+  --contribution-default-bgColor-3: #bd93f9 !important;
+  --contribution-default-bgColor-4: #ff79c6 !important;
+
+  --card-bgColor: #282a36 !important;
+  --page-header-bgColor: #343746 !important;
+  --timelineBadge-bgColor: #343746 !important;
+  --counter-bgColor-emphasis: #6272a4 !important;
+  --counter-bgColor-muted: #6272a41f !important;
+}
+
+[data-custom-theme="dracula"] body {
+  background-color: #282a36 !important;
+  color: #f8f8f2 !important;
+}

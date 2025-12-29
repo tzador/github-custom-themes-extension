@@ -1,0 +1,80 @@
+/*
+ * High Contrast Light Theme - Maximum readability light
+ */
+
+[data-custom-theme="highcontrast-light"],
+[data-custom-theme="highcontrast-light"] ::backdrop {
+  --bgColor-default: #ffffff !important;
+  --bgColor-muted: #f6f6f6 !important;
+  --bgColor-inset: #ffffff !important;
+  --bgColor-emphasis: #000000 !important;
+  --bgColor-inverse: #000000 !important;
+  --bgColor-disabled: #e6e6e6 !important;
+  --bgColor-transparent: #ffffff00 !important;
+
+  --bgColor-neutral-emphasis: #6e7681 !important;
+  --bgColor-neutral-muted: #6e76811f !important;
+  --bgColor-accent-emphasis: #0550ae !important;
+  --bgColor-accent-muted: #0550ae33 !important;
+  --bgColor-success-emphasis: #1a7f37 !important;
+  --bgColor-success-muted: #1a7f3733 !important;
+  --bgColor-attention-emphasis: #9a6700 !important;
+  --bgColor-attention-muted: #9a670033 !important;
+  --bgColor-danger-emphasis: #cf222e !important;
+  --bgColor-danger-muted: #cf222e33 !important;
+  --bgColor-done-emphasis: #8250df !important;
+  --bgColor-done-muted: #8250df33 !important;
+
+  --fgColor-default: #000000 !important;
+  --fgColor-muted: #4a4a4a !important;
+  --fgColor-onEmphasis: #ffffff !important;
+  --fgColor-disabled: #6e7681 !important;
+  --fgColor-link: #0550ae !important;
+  --fgColor-accent: #0550ae !important;
+  --fgColor-success: #1a7f37 !important;
+  --fgColor-attention: #9a6700 !important;
+  --fgColor-danger: #cf222e !important;
+  --fgColor-done: #8250df !important;
+
+  --borderColor-default: #000000 !important;
+  --borderColor-muted: #00000066 !important;
+  --borderColor-emphasis: #000000 !important;
+
+  --header-bgColor: #000000 !important;
+  --header-fgColor-default: #ffffffb3 !important;
+
+  --button-default-bgColor-rest: #f6f6f6 !important;
+  --button-default-fgColor-rest: #000000 !important;
+  --button-primary-bgColor-rest: #0550ae !important;
+  --button-primary-fgColor-rest: #ffffff !important;
+
+  --control-bgColor-rest: #f6f6f6 !important;
+  --control-fgColor-rest: #000000 !important;
+  --control-checked-bgColor-rest: #0550ae !important;
+
+  --diffBlob-additionLine-bgColor: #1a7f3733 !important;
+  --diffBlob-deletionLine-bgColor: #cf222e33 !important;
+
+  --color-prettylights-syntax-comment: #6e7681 !important;
+  --color-prettylights-syntax-constant: #0550ae !important;
+  --color-prettylights-syntax-entity: #8250df !important;
+  --color-prettylights-syntax-keyword: #cf222e !important;
+  --color-prettylights-syntax-string: #1a7f37 !important;
+  --color-prettylights-syntax-variable: #9a6700 !important;
+
+  --codeMirror-bgColor: #ffffff !important;
+  --codeMirror-fgColor: #000000 !important;
+
+  --card-bgColor: #ffffff !important;
+  --page-header-bgColor: #f6f6f6 !important;
+  --tooltip-bgColor: #000000 !important;
+  --tooltip-fgColor: #ffffff !important;
+  --overlay-bgColor: #ffffff !important;
+  --selection-bgColor: #0550ae33 !important;
+  --focus-outlineColor: #0550ae !important;
+}
+
+[data-custom-theme="highcontrast-light"] body {
+  background-color: #ffffff !important;
+  color: #000000 !important;
+}

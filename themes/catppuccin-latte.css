@@ -1,0 +1,80 @@
+/*
+ * Catppuccin Latte Theme - Soothing pastel light theme
+ */
+
+[data-custom-theme="catppuccin-latte"],
+[data-custom-theme="catppuccin-latte"] ::backdrop {
+  --bgColor-default: #eff1f5 !important;
+  --bgColor-muted: #e6e9ef !important;
+  --bgColor-inset: #dce0e8 !important;
+  --bgColor-emphasis: #4c4f69 !important;
+  --bgColor-inverse: #4c4f69 !important;
+  --bgColor-disabled: #ccd0da !important;
+  --bgColor-transparent: #ffffff00 !important;
+
+  --bgColor-neutral-emphasis: #6c6f85 !important;
+  --bgColor-neutral-muted: #6c6f851f !important;
+  --bgColor-accent-emphasis: #1e66f5 !important;
+  --bgColor-accent-muted: #1e66f533 !important;
+  --bgColor-success-emphasis: #40a02b !important;
+  --bgColor-success-muted: #40a02b33 !important;
+  --bgColor-attention-emphasis: #df8e1d !important;
+  --bgColor-attention-muted: #df8e1d33 !important;
+  --bgColor-danger-emphasis: #d20f39 !important;
+  --bgColor-danger-muted: #d20f3933 !important;
+  --bgColor-done-emphasis: #8839ef !important;
+  --bgColor-done-muted: #8839ef33 !important;
+
+  --fgColor-default: #4c4f69 !important;
+  --fgColor-muted: #6c6f85 !important;
+  --fgColor-onEmphasis: #eff1f5 !important;
+  --fgColor-disabled: #9ca0b0 !important;
+  --fgColor-link: #1e66f5 !important;
+  --fgColor-accent: #1e66f5 !important;
+  --fgColor-success: #40a02b !important;
+  --fgColor-attention: #df8e1d !important;
+  --fgColor-danger: #d20f39 !important;
+  --fgColor-done: #8839ef !important;
+
+  --borderColor-default: #ccd0da !important;
+  --borderColor-muted: #e6e9efb3 !important;
+  --borderColor-emphasis: #6c6f85 !important;
+
+  --header-bgColor: #4c4f69 !important;
+  --header-fgColor-default: #eff1f5b3 !important;
+
+  --button-default-bgColor-rest: #e6e9ef !important;
+  --button-default-fgColor-rest: #4c4f69 !important;
+  --button-primary-bgColor-rest: #1e66f5 !important;
+  --button-primary-fgColor-rest: #eff1f5 !important;
+
+  --control-bgColor-rest: #e6e9ef !important;
+  --control-fgColor-rest: #4c4f69 !important;
+  --control-checked-bgColor-rest: #1e66f5 !important;
+
+  --diffBlob-additionLine-bgColor: #40a02b33 !important;
+  --diffBlob-deletionLine-bgColor: #d20f3933 !important;
+
+  --color-prettylights-syntax-comment: #6c6f85 !important;
+  --color-prettylights-syntax-constant: #fe640b !important;
+  --color-prettylights-syntax-entity: #1e66f5 !important;
+  --color-prettylights-syntax-keyword: #8839ef !important;
+  --color-prettylights-syntax-string: #40a02b !important;
+  --color-prettylights-syntax-variable: #d20f39 !important;
+
+  --codeMirror-bgColor: #eff1f5 !important;
+  --codeMirror-fgColor: #4c4f69 !important;
+
+  --card-bgColor: #eff1f5 !important;
+  --page-header-bgColor: #e6e9ef !important;
+  --tooltip-bgColor: #4c4f69 !important;
+  --tooltip-fgColor: #eff1f5 !important;
+  --overlay-bgColor: #eff1f5 !important;
+  --selection-bgColor: #1e66f533 !important;
+  --focus-outlineColor: #1e66f5 !important;
+}
+
+[data-custom-theme="catppuccin-latte"] body {
+  background-color: #eff1f5 !important;
+  color: #4c4f69 !important;
+}

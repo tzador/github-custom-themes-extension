@@ -1,0 +1,80 @@
+/*
+ * Nord Light Theme (Snow Storm) - Arctic light theme
+ */
+
+[data-custom-theme="nord-light"],
+[data-custom-theme="nord-light"] ::backdrop {
+  --bgColor-default: #eceff4 !important;
+  --bgColor-muted: #e5e9f0 !important;
+  --bgColor-inset: #d8dee9 !important;
+  --bgColor-emphasis: #2e3440 !important;
+  --bgColor-inverse: #2e3440 !important;
+  --bgColor-disabled: #d8dee9 !important;
+  --bgColor-transparent: #ffffff00 !important;
+
+  --bgColor-neutral-emphasis: #4c566a !important;
+  --bgColor-neutral-muted: #4c566a1f !important;
+  --bgColor-accent-emphasis: #5e81ac !important;
+  --bgColor-accent-muted: #5e81ac33 !important;
+  --bgColor-success-emphasis: #a3be8c !important;
+  --bgColor-success-muted: #a3be8c33 !important;
+  --bgColor-attention-emphasis: #ebcb8b !important;
+  --bgColor-attention-muted: #ebcb8b33 !important;
+  --bgColor-danger-emphasis: #bf616a !important;
+  --bgColor-danger-muted: #bf616a33 !important;
+  --bgColor-done-emphasis: #b48ead !important;
+  --bgColor-done-muted: #b48ead33 !important;
+
+  --fgColor-default: #2e3440 !important;
+  --fgColor-muted: #4c566a !important;
+  --fgColor-onEmphasis: #eceff4 !important;
+  --fgColor-disabled: #4c566a !important;
+  --fgColor-link: #5e81ac !important;
+  --fgColor-accent: #5e81ac !important;
+  --fgColor-success: #a3be8c !important;
+  --fgColor-attention: #d08770 !important;
+  --fgColor-danger: #bf616a !important;
+  --fgColor-done: #b48ead !important;
+
+  --borderColor-default: #d8dee9 !important;
+  --borderColor-muted: #e5e9f0b3 !important;
+  --borderColor-emphasis: #4c566a !important;
+
+  --header-bgColor: #3b4252 !important;
+  --header-fgColor-default: #eceff4b3 !important;
+
+  --button-default-bgColor-rest: #e5e9f0 !important;
+  --button-default-fgColor-rest: #2e3440 !important;
+  --button-primary-bgColor-rest: #5e81ac !important;
+  --button-primary-fgColor-rest: #eceff4 !important;
+
+  --control-bgColor-rest: #e5e9f0 !important;
+  --control-fgColor-rest: #2e3440 !important;
+  --control-checked-bgColor-rest: #5e81ac !important;
+
+  --diffBlob-additionLine-bgColor: #a3be8c33 !important;
+  --diffBlob-deletionLine-bgColor: #bf616a33 !important;
+
+  --color-prettylights-syntax-comment: #4c566a !important;
+  --color-prettylights-syntax-constant: #b48ead !important;
+  --color-prettylights-syntax-entity: #81a1c1 !important;
+  --color-prettylights-syntax-keyword: #5e81ac !important;
+  --color-prettylights-syntax-string: #a3be8c !important;
+  --color-prettylights-syntax-variable: #d08770 !important;
+
+  --codeMirror-bgColor: #eceff4 !important;
+  --codeMirror-fgColor: #2e3440 !important;
+
+  --card-bgColor: #eceff4 !important;
+  --page-header-bgColor: #e5e9f0 !important;
+  --tooltip-bgColor: #2e3440 !important;
+  --tooltip-fgColor: #eceff4 !important;
+  --overlay-bgColor: #eceff4 !important;
+  --selection-bgColor: #5e81ac33 !important;
+  --focus-outlineColor: #5e81ac !important;
+}
+
+[data-custom-theme="nord-light"] body {
+  background-color: #eceff4 !important;
+  color: #2e3440 !important;
+}

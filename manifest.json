@@ -1,0 +1,38 @@
+{
+  "manifest_version": 3,
+  "name": "GitHub Custom Themes",
+  "version": "2.1.0",
+  "description": "16 beautiful themes for GitHub - 8 light and 8 dark with hover preview",
+  "permissions": ["storage"],
+  "host_permissions": ["https://github.com/*", "https://gist.github.com/*"],
+  "content_scripts": [
+    {
+      "matches": ["https://github.com/*", "https://gist.github.com/*"],
+      "css": [
+        "themes/sepia.css",
+        "themes/solarized.css",
+        "themes/solarized-dark.css",
+        "themes/gruvbox-light.css",
+        "themes/gruvbox-dark.css",
+        "themes/ayu-light.css",
+        "themes/nord.css",
+        "themes/nord-light.css",
+        "themes/dracula.css",
+        "themes/monokai.css",
+        "themes/tokyonight.css",
+        "themes/catppuccin.css",
+        "themes/catppuccin-latte.css",
+        "themes/highcontrast.css",
+        "themes/highcontrast-light.css",
+        "themes.css"
+      ],
+      "js": ["content.js"],
+      "run_at": "document_start"
+    }
+  ],
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  }
+}
