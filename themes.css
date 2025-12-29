@@ -3,36 +3,6 @@
  * Uses fixed styling that doesn't change with themes
  */
 
-/* Preload Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&family=Fira+Code:wght@400;500&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Lora:wght@400;500;600&family=Merriweather:wght@400;700&family=Open+Sans:wght@400;500;600&family=Playfair+Display:wght@400;500;600&family=Poppins:wght@400;500;600&family=Source+Code+Pro:wght@400;500&display=swap');
-
-/* Custom Font Application */
-html[data-custom-font] {
-  font-family: var(--custom-font-family) !important;
-}
-
-html[data-custom-font] body,
-html[data-custom-font] p,
-html[data-custom-font] span,
-html[data-custom-font] div,
-html[data-custom-font] a,
-html[data-custom-font] li,
-html[data-custom-font] td,
-html[data-custom-font] th,
-html[data-custom-font] h1,
-html[data-custom-font] h2,
-html[data-custom-font] h3,
-html[data-custom-font] h4,
-html[data-custom-font] h5,
-html[data-custom-font] h6,
-html[data-custom-font] button,
-html[data-custom-font] input,
-html[data-custom-font] textarea,
-html[data-custom-font] select,
-html[data-custom-font] label {
-  font-family: var(--custom-font-family) !important;
-}
-
 /* Toggle Button */
 #github-theme-toggle {
   position: fixed;
@@ -53,7 +23,8 @@ html[data-custom-font] label {
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.3);
   transition: all 0.2s ease;
   opacity: 0.9;
-  font-family: "Comic Sans MS", "Comic Sans", cursive;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans",
+    Helvetica, Arial, sans-serif;
 }
 
 #github-theme-toggle:hover {
@@ -82,7 +53,8 @@ html[data-custom-font] label {
   transform: translateY(8px) scale(0.96);
   transition: all 0.15s ease;
   overflow: hidden;
-  font-family: "Comic Sans MS", "Comic Sans", cursive;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans",
+    Helvetica, Arial, sans-serif;
 }
 
 #github-theme-menu.show {
@@ -95,32 +67,10 @@ html[data-custom-font] label {
 .theme-menu-header {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   padding: 10px 12px;
   background: #555;
   border-bottom: 2px solid #444;
-}
-
-.theme-font-btn {
-  padding: 4px 10px;
-  border: 1px solid #333;
-  background: #666;
-  color: #fff;
-  border-radius: 4px;
-  font-size: 11px;
-  font-weight: bold;
-  cursor: pointer;
-  font-family: "Comic Sans MS", "Comic Sans", cursive;
-  transition: all 0.1s ease;
-  text-shadow: 1px 1px 0 #000;
-  max-width: 140px;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-
-.theme-font-btn:hover {
-  background: #777;
 }
 
 .theme-reset-btn {
@@ -132,7 +82,8 @@ html[data-custom-font] label {
   font-size: 11px;
   font-weight: bold;
   cursor: pointer;
-  font-family: "Comic Sans MS", "Comic Sans", cursive;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans",
+    Helvetica, Arial, sans-serif;
   transition: all 0.1s ease;
   text-shadow: 1px 1px 0 #000;
 }
@@ -187,11 +138,11 @@ html[data-custom-font] label {
   font-size: 11px;
   cursor: pointer;
   transition: all 0.1s ease;
-  font-family: "Comic Sans MS", "Comic Sans", cursive;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans",
+    Helvetica, Arial, sans-serif;
   text-align: left;
   gap: 6px;
   border-radius: 4px;
-  margin-bottom: 2px;
 }
 
 .light-item {

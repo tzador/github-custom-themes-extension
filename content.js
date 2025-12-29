@@ -2,21 +2,6 @@
 (function () {
   "use strict";
 
-  // Available fonts (cycles through on button click)
-  const FONTS = [
-    { id: null, name: "Default Font" },
-    { id: "inter", name: "Inter", family: "'Inter', sans-serif" },
-    { id: "open-sans", name: "Open Sans", family: "'Open Sans', sans-serif" },
-    { id: "poppins", name: "Poppins", family: "'Poppins', sans-serif" },
-    { id: "playfair", name: "Playfair Display", family: "'Playfair Display', serif" },
-    { id: "merriweather", name: "Merriweather", family: "'Merriweather', serif" },
-    { id: "lora", name: "Lora", family: "'Lora', serif" },
-    { id: "comic-neue", name: "Comic Neue", family: "'Comic Neue', cursive" },
-    { id: "jetbrains-mono", name: "JetBrains Mono", family: "'JetBrains Mono', monospace" },
-    { id: "fira-code", name: "Fira Code", family: "'Fira Code', monospace" },
-    { id: "source-code-pro", name: "Source Code Pro", family: "'Source Code Pro', monospace" },
-  ];
-
   // Light themes (left column)
   const LIGHT_THEMES = [
     { id: "snowwhite", name: "Snow White", icon: "❄️" },
@@ -47,7 +32,6 @@
   let savedTheme = null;
   let menuOpen = false;
   let previewTheme = null;
-  let currentFontIndex = 0;
 
   // Apply theme to DOM
   function applyThemeToDOM(themeId) {
@@ -117,54 +101,6 @@
   // Reset to default theme
   function resetToDefault() {
     selectTheme(null);
-  }
-
-  // Apply font to page
-  function applyFont(fontId) {
-    const font = FONTS.find(f => f.id === fontId) || FONTS[0];
-    
-    if (fontId === null) {
-      document.documentElement.style.removeProperty("--custom-font-family");
-      document.documentElement.removeAttribute("data-custom-font");
-    } else {
-      document.documentElement.style.setProperty("--custom-font-family", font.family);
-      document.documentElement.setAttribute("data-custom-font", fontId);
-    }
-  }
-
-  // Cycle to next font
-  function cycleFont() {
-    currentFontIndex = (currentFontIndex + 1) % FONTS.length;
-    const font = FONTS[currentFontIndex];
-    applyFont(font.id);
-    saveFont(font.id);
-    updateFontButton();
-  }
-
-  // Save font to storage
-  function saveFont(fontId) {
-    chrome.storage.sync.set({ githubCustomFont: fontId });
-  }
-
-  // Load saved font
-  function loadFont() {
-    chrome.storage.sync.get(["githubCustomFont"], (result) => {
-      const fontId = result.githubCustomFont !== undefined ? result.githubCustomFont : null;
-      currentFontIndex = FONTS.findIndex(f => f.id === fontId);
-      if (currentFontIndex === -1) currentFontIndex = 0;
-      applyFont(fontId);
-      updateFontButton();
-    });
-  }
-
-  // Update font button text
-  function updateFontButton() {
-    const btn = document.getElementById("theme-font-btn");
-    if (btn) {
-      const font = FONTS[currentFontIndex];
-      btn.textContent = font.name;
-      btn.title = `Current: ${font.name} (click to cycle)`;
-    }
   }
 
   // Default theme (not in columns, used for reset)
@@ -290,7 +226,6 @@
     const header = document.createElement("div");
     header.className = "theme-menu-header";
     header.innerHTML = `
-      <button class="theme-font-btn" id="theme-font-btn" title="Click to cycle fonts">Default Font</button>
       <button class="theme-reset-btn" id="theme-reset" title="Reset to Default">Reset to Default</button>
     `;
     menu.appendChild(header);
@@ -325,12 +260,6 @@
     columnsContainer.appendChild(darkColumn);
     menu.appendChild(columnsContainer);
     document.body.appendChild(menu);
-
-    // Font button event
-    document.getElementById("theme-font-btn").addEventListener("click", (e) => {
-      e.stopPropagation();
-      cycleFont();
-    });
 
     // Reset button event
     document.getElementById("theme-reset").addEventListener("click", (e) => {
@@ -381,16 +310,6 @@
             updateToggleButton();
             updateMenuSelection();
           }
-        }
-        
-        if (changes.githubCustomFont) {
-          const newFontId = changes.githubCustomFont.newValue !== undefined 
-            ? changes.githubCustomFont.newValue 
-            : null;
-          currentFontIndex = FONTS.findIndex(f => f.id === newFontId);
-          if (currentFontIndex === -1) currentFontIndex = 0;
-          applyFont(newFontId);
-          updateFontButton();
         }
       }
     });
@@ -450,32 +369,22 @@
 
     if (document.body) {
       loadTheme();
-      loadFont();
       createUI();
       setupNavigationWatcher();
     } else {
       document.addEventListener("DOMContentLoaded", () => {
         loadTheme();
-        loadFont();
         createUI();
         setupNavigationWatcher();
       });
     }
   }
 
-  // Apply theme and font immediately to prevent flash
-  chrome.storage.sync.get(["githubCustomTheme", "githubCustomFont"], (result) => {
+  // Apply theme immediately to prevent flash
+  chrome.storage.sync.get(["githubCustomTheme"], (result) => {
     if (result.githubCustomTheme) {
       savedTheme = result.githubCustomTheme;
       document.documentElement.setAttribute("data-custom-theme", result.githubCustomTheme);
-    }
-    if (result.githubCustomFont) {
-      const font = FONTS.find(f => f.id === result.githubCustomFont);
-      if (font) {
-        currentFontIndex = FONTS.indexOf(font);
-        document.documentElement.style.setProperty("--custom-font-family", font.family);
-        document.documentElement.setAttribute("data-custom-font", result.githubCustomFont);
-      }
     }
   });
 
