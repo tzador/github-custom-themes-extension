@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
   "name": "GitHub Vibed Themes",
-  "version": "2.1.0",
-  "description": "16 beautiful themes for GitHub - 8 light and 8 dark with hover preview",
+  "version": "2.2.0",
+  "description": "18 beautiful themes for GitHub - 9 light and 9 dark with hover preview",
   "permissions": ["storage"],
   "host_permissions": ["https://github.com/*", "https://gist.github.com/*"],
   "content_scripts": [
@@ -25,6 +25,8 @@
         "themes/highcontrast.css",
         "themes/highcontrast-light.css",
         "themes/snowwhite.css",
+        "themes/purple.css",
+        "themes/purple-light.css",
         "themes.css"
       ],
       "js": ["content.js"],

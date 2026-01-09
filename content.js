@@ -11,6 +11,7 @@
     { id: "ayu-light", name: "Ayu", icon: "🌤" },
     { id: "nord-light", name: "Nord", icon: "🏔" },
     { id: "catppuccin-latte", name: "Catppuccin", icon: "☕" },
+    { id: "purple-light", name: "Purple", icon: "🔮" },
     { id: "highcontrast-light", name: "High Contrast", icon: "◐" },
   ];
 
@@ -23,6 +24,7 @@
     { id: "monokai", name: "Monokai", icon: "🎨" },
     { id: "tokyonight", name: "Tokyo Night", icon: "🗼" },
     { id: "catppuccin", name: "Catppuccin", icon: "🐱" },
+    { id: "purple", name: "Purple", icon: "🔮" },
     { id: "highcontrast", name: "High Contrast", icon: "◑" },
   ];
 
