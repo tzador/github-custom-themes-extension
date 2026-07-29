@@ -1,0 +1,25 @@
+html[data-gct-theme="poimandres"] {
+  --gct-color-scheme: dark;
+  --gct-bg: #1b1e28;
+  --gct-bg-subtle: #171922;
+  --gct-bg-inset: #12141c;
+  --gct-bg-overlay: #252b37;
+  --gct-fg: #a6accd;
+  --gct-fg-muted: #767c9d;
+  --gct-border: #303340;
+  --gct-accent: #5de4c7;
+  --gct-red: #d0679d;
+  --gct-orange: #d0679d;
+  --gct-yellow: #fffac2;
+  --gct-green: #5de4c7;
+  --gct-cyan: #89ddff;
+  --gct-blue: #add7ff;
+  --gct-purple: #fcc5e9;
+  --gct-pink: #fcc5e9;
+  --gct-syn-comment: #767c9d;
+  --gct-syn-keyword: #91b4d5;
+  --gct-syn-string: var(--gct-green);
+  --gct-syn-entity: var(--gct-blue);
+  --gct-syn-constant: #5fb3a1;
+  --gct-syn-heading: var(--gct-green);
+}

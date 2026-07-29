@@ -60,6 +60,40 @@
 @import "./themes/night-owl-light.css";
 @import "./themes/kanagawa-lotus.css";
 @import "./themes/sepia.css";
+@import "./themes/zenburn.css";
+@import "./themes/horizon.css";
+@import "./themes/cobalt2.css";
+@import "./themes/material-ocean.css";
+@import "./themes/oceanic-next.css";
+@import "./themes/vitesse-dark.css";
+@import "./themes/andromeda.css";
+@import "./themes/poimandres.css";
+@import "./themes/moonlight.css";
+@import "./themes/sonokai.css";
+@import "./themes/laserwave.css";
+@import "./themes/flexoki-dark.css";
+@import "./themes/vitesse-light.css";
+@import "./themes/flexoki-light.css";
+@import "./themes/tomorrow.css";
+@import "./themes/papercolor-light.css";
+@import "./themes/iceberg-light.css";
+@import "./themes/nord-light.css";
+@import "./themes/dark-plus.css";
+@import "./themes/monokai-pro.css";
+@import "./themes/gruvbox-material-dark.css";
+@import "./themes/nightfox.css";
+@import "./themes/iceberg.css";
+@import "./themes/tomorrow-night.css";
+@import "./themes/snazzy.css";
+@import "./themes/panda.css";
+@import "./themes/aura.css";
+@import "./themes/everblush.css";
+@import "./themes/challenger-deep.css";
+@import "./themes/light-plus.css";
+@import "./themes/quiet-light.css";
+@import "./themes/selenized-light.css";
+@import "./themes/gruvbox-material-light.css";
+@import "./themes/tokyo-night-day.css";
 
 /* Internal derivations (engine namespace only - never define --gct-* tokens
    that themes set, they would win the cascade over the theme files). */

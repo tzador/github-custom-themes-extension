@@ -1,0 +1,26 @@
+html[data-gct-theme="gruvbox-material-light"] {
+  --gct-color-scheme: light;
+  --gct-bg: #fbf1c7;
+  --gct-bg-subtle: #f2e5bc;
+  --gct-bg-inset: #eee0b7;
+  --gct-bg-overlay: #f9f5d7;
+  --gct-fg: #654735;
+  --gct-fg-muted: #928374;
+  --gct-border: #d5c4a1;
+  --gct-accent: #45707a;
+  --gct-red: #c14a4a;
+  --gct-orange: #c35e0a;
+  --gct-yellow: #b47109;
+  --gct-green: #6c782e;
+  --gct-cyan: #4c7a5d;
+  --gct-blue: #45707a;
+  --gct-purple: #945e80;
+  --gct-pink: #945e80;
+  --gct-syn-comment: #928374;
+  --gct-syn-keyword: var(--gct-red);
+  --gct-syn-entity: var(--gct-cyan);
+  --gct-syn-constant: var(--gct-purple);
+  --gct-syn-variable: var(--gct-blue);
+  --gct-syn-tag: var(--gct-cyan);
+  --gct-syn-heading: var(--gct-orange);
+}

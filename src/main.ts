@@ -5,8 +5,53 @@ import { themes, type Theme } from "./themes.ts";
 
 const html = document.documentElement;
 
-html.dataset.gctFontSans = "mona-sans";
-html.dataset.gctFontMono = "monaspace-neon";
+const storageKeys = {
+  fontSans: "gct-font-sans",
+  fontMono: "gct-font-mono",
+  theme: "gct-theme",
+} as const;
+
+// localStorage can throw (privacy modes, storage disabled) — never let
+// persistence break the extension.
+function readStored(key: string): string | null {
+  try {
+    return localStorage.getItem(key);
+  } catch {
+    return null;
+  }
+}
+
+function writeStored(key: string, value: string | null) {
+  try {
+    if (value === null) localStorage.removeItem(key);
+    else localStorage.setItem(key, value);
+  } catch {
+    /* ignore */
+  }
+}
+
+function applyFont(
+  datasetKey: "gctFontSans" | "gctFontMono",
+  slug: string,
+) {
+  if (slug) html.dataset[datasetKey] = slug;
+  else delete html.dataset[datasetKey];
+}
+
+function restoreFont(
+  datasetKey: "gctFontSans" | "gctFontMono",
+  storageKey: string,
+  list: Font[],
+  fallback: string,
+) {
+  const stored = readStored(storageKey);
+  // "" is a real choice (Default); null means never chosen → fallback.
+  const valid = stored === "" || list.some((font) => font.slug === stored);
+  applyFont(datasetKey, stored !== null && valid ? stored : fallback);
+}
+
+restoreFont("gctFontSans", storageKeys.fontSans, fonts.sans, "mona-sans");
+restoreFont("gctFontMono", storageKeys.fontMono, fonts.mono, "monaspace-neon");
 
 /*
  * GitHub picks its native palette from data-color-mode/data-*-theme on <html>.
@@ -38,6 +83,28 @@ function applyTheme(slug: string, mode: "light" | "dark") {
     }
   }
 }
+
+function restoreTheme() {
+  const stored = readStored(storageKeys.theme);
+  if (!stored) return;
+  try {
+    const { slug, mode } = JSON.parse(stored) as {
+      slug?: unknown;
+      mode?: unknown;
+    };
+    if (
+      typeof slug === "string" &&
+      (mode === "light" || mode === "dark") &&
+      themes[mode].some((theme) => theme.slug === slug)
+    ) {
+      applyTheme(slug, mode);
+    }
+  } catch {
+    /* ignore corrupt value */
+  }
+}
+
+restoreTheme();
 
 interface Item {
   name: string;
@@ -95,6 +162,35 @@ function listSection(
     }
   });
 
+  // Arrow keys move within the list and apply the option right away.
+  listEl.addEventListener("keydown", (event) => {
+    if (!["ArrowDown", "ArrowUp", "Home", "End"].includes(event.key)) return;
+    event.preventDefault();
+    // Start from the focused option, falling back to the selected one.
+    const focused = buttons.indexOf(
+      document.activeElement as HTMLButtonElement,
+    );
+    const start =
+      focused !== -1
+        ? focused
+        : buttons.findIndex((b) => b.classList.contains("gct-selected"));
+    const index =
+      event.key === "Home"
+        ? 0
+        : event.key === "End"
+          ? buttons.length - 1
+          : Math.min(
+              Math.max(start + (event.key === "ArrowDown" ? 1 : -1), 0),
+              buttons.length - 1,
+            );
+    const target = buttons[index];
+    if (!target) return;
+    target.focus();
+    target.scrollIntoView({ block: "nearest" });
+    api.select(target.dataset.slug ?? "");
+    syncSections();
+  });
+
   section.append(title, listEl);
   return section;
 }
@@ -102,13 +198,14 @@ function listSection(
 function fontSection(
   label: string,
   datasetKey: "gctFontSans" | "gctFontMono",
+  storageKey: string,
   list: Font[],
 ): HTMLElement {
   return listSection(label, list, {
     isSelected: (slug) => (html.dataset[datasetKey] ?? "") === slug,
     select: (slug) => {
-      if (slug) html.dataset[datasetKey] = slug;
-      else delete html.dataset[datasetKey];
+      applyFont(datasetKey, slug);
+      writeStored(storageKey, slug);
     },
     decorate: (item, button) => {
       button.style.setProperty("font-family", `"${item.name}"`, "important");
@@ -128,7 +225,13 @@ function themeSection(
       // active dark theme leaves the light list fully unselected & vice versa.
       return slug ? current === slug : current === "";
     },
-    select: (slug) => applyTheme(slug, mode),
+    select: (slug) => {
+      applyTheme(slug, mode);
+      writeStored(
+        storageKeys.theme,
+        slug ? JSON.stringify({ slug, mode }) : null,
+      );
+    },
   });
 }
 
@@ -165,8 +268,8 @@ function injectUi() {
   const body = document.createElement("div");
   body.className = "gct-drawer-body";
   body.append(
-    fontSection("Sans font", "gctFontSans", fonts.sans),
-    fontSection("Mono font", "gctFontMono", fonts.mono),
+    fontSection("Sans font", "gctFontSans", storageKeys.fontSans, fonts.sans),
+    fontSection("Mono font", "gctFontMono", storageKeys.fontMono, fonts.mono),
     themeSection("Light theme", "light", themes.light),
     themeSection("Dark theme", "dark", themes.dark),
   );

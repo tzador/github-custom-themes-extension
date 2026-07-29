@@ -131,6 +131,74 @@
   font-display: swap;
 }
 
+@font-face {
+  font-family: "Public Sans";
+  src: url("chrome-extension://__MSG_@@extension_id__/fonts/public-sans/PublicSans-Var.woff2") format("woff2");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Public Sans";
+  src: url("chrome-extension://__MSG_@@extension_id__/fonts/public-sans/PublicSans-Italic-Var.woff2") format("woff2");
+  font-weight: 100 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Figtree";
+  src: url("chrome-extension://__MSG_@@extension_id__/fonts/figtree/Figtree-Var.woff2") format("woff2");
+  font-weight: 300 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Figtree";
+  src: url("chrome-extension://__MSG_@@extension_id__/fonts/figtree/Figtree-Italic-Var.woff2") format("woff2");
+  font-weight: 300 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "DM Sans";
+  src: url("chrome-extension://__MSG_@@extension_id__/fonts/dm-sans/DMSans-Var.woff2") format("woff2");
+  font-weight: 100 1000;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "DM Sans";
+  src: url("chrome-extension://__MSG_@@extension_id__/fonts/dm-sans/DMSans-Italic-Var.woff2") format("woff2");
+  font-weight: 100 1000;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Manrope";
+  src: url("chrome-extension://__MSG_@@extension_id__/fonts/manrope/Manrope-Var.woff2") format("woff2");
+  font-weight: 200 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Rubik";
+  src: url("chrome-extension://__MSG_@@extension_id__/fonts/rubik/Rubik-Var.woff2") format("woff2");
+  font-weight: 300 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Rubik";
+  src: url("chrome-extension://__MSG_@@extension_id__/fonts/rubik/Rubik-Italic-Var.woff2") format("woff2");
+  font-weight: 300 900;
+  font-style: italic;
+  font-display: swap;
+}
+
 /* ---------- mono ---------- */
 
 @font-face {
@@ -283,6 +351,89 @@
   font-display: swap;
 }
 
+@font-face {
+  font-family: "Victor Mono";
+  src: url("chrome-extension://__MSG_@@extension_id__/fonts/victor-mono/VictorMono-Var.woff2") format("woff2");
+  font-weight: 100 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Victor Mono";
+  src: url("chrome-extension://__MSG_@@extension_id__/fonts/victor-mono/VictorMono-Italic-Var.woff2") format("woff2");
+  font-weight: 100 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Red Hat Mono";
+  src: url("chrome-extension://__MSG_@@extension_id__/fonts/red-hat-mono/RedHatMono-Var.woff2") format("woff2");
+  font-weight: 300 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Red Hat Mono";
+  src: url("chrome-extension://__MSG_@@extension_id__/fonts/red-hat-mono/RedHatMono-Italic-Var.woff2") format("woff2");
+  font-weight: 300 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Space Mono";
+  src: url("chrome-extension://__MSG_@@extension_id__/fonts/space-mono/SpaceMono-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Space Mono";
+  src: url("chrome-extension://__MSG_@@extension_id__/fonts/space-mono/SpaceMono-Italic.woff2") format("woff2");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Space Mono";
+  src: url("chrome-extension://__MSG_@@extension_id__/fonts/space-mono/SpaceMono-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Space Mono";
+  src: url("chrome-extension://__MSG_@@extension_id__/fonts/space-mono/SpaceMono-BoldItalic.woff2") format("woff2");
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Martian Mono";
+  src: url("chrome-extension://__MSG_@@extension_id__/fonts/martian-mono/MartianMono-Var.woff2") format("woff2");
+  font-weight: 100 800;
+  font-stretch: 75% 112.5%;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Intel One Mono";
+  src: url("chrome-extension://__MSG_@@extension_id__/fonts/intel-one-mono/IntelOneMono-Var.woff2") format("woff2");
+  font-weight: 300 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Intel One Mono";
+  src: url("chrome-extension://__MSG_@@extension_id__/fonts/intel-one-mono/IntelOneMono-Italic-Var.woff2") format("woff2");
+  font-weight: 300 700;
+  font-style: italic;
+  font-display: swap;
+}
+
 /* ---------- font selection via data attributes ---------- */
 /* data-gct-font-* values are slugs from fonts.ts */
 
@@ -306,6 +457,21 @@ html[data-gct-font-sans="nunito-sans"] {
 }
 html[data-gct-font-sans="work-sans"] {
   --gct-font-sans: "Work Sans";
+}
+html[data-gct-font-sans="public-sans"] {
+  --gct-font-sans: "Public Sans";
+}
+html[data-gct-font-sans="figtree"] {
+  --gct-font-sans: "Figtree";
+}
+html[data-gct-font-sans="dm-sans"] {
+  --gct-font-sans: "DM Sans";
+}
+html[data-gct-font-sans="manrope"] {
+  --gct-font-sans: "Manrope";
+}
+html[data-gct-font-sans="rubik"] {
+  --gct-font-sans: "Rubik";
 }
 
 html[data-gct-font-mono="jetbrains-mono"] {
@@ -334,4 +500,19 @@ html[data-gct-font-mono="monaspace-neon"] {
 }
 html[data-gct-font-mono="hack"] {
   --gct-font-mono: "Hack";
+}
+html[data-gct-font-mono="victor-mono"] {
+  --gct-font-mono: "Victor Mono";
+}
+html[data-gct-font-mono="red-hat-mono"] {
+  --gct-font-mono: "Red Hat Mono";
+}
+html[data-gct-font-mono="space-mono"] {
+  --gct-font-mono: "Space Mono";
+}
+html[data-gct-font-mono="martian-mono"] {
+  --gct-font-mono: "Martian Mono";
+}
+html[data-gct-font-mono="intel-one-mono"] {
+  --gct-font-mono: "Intel One Mono";
 }

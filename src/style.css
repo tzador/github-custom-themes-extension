@@ -193,6 +193,10 @@ html[data-gct-font-mono]
 .gct-font-option:hover {
   background: var(--bgColor-neutral-muted, rgba(175, 184, 193, 0.2));
 }
+.gct-font-option:focus-visible {
+  outline: 2px solid var(--focus-outlineColor, #0969da);
+  outline-offset: -2px;
+}
 .gct-font-option.gct-selected {
   background: var(--bgColor-accent-muted, #ddf4ff);
   color: var(--fgColor-accent, #0969da);

@@ -21,6 +21,11 @@ fonts). Files from official GitHub repos are full builds.
 | Commit Mono | `commit-mono/` | OFL 1.1 | github.com/eigilnikolajsen/commit-mono (converted TTF→woff2) |
 | Monaspace Neon | `monaspace-neon/` | OFL 1.1 | github.com/githubnext/monaspace (variable, full build) |
 | Hack | `hack/` | MIT + Bitstream Vera | github.com/source-foundry/Hack (static 4 styles) |
+| Victor Mono | `victor-mono/` | OFL 1.1 | Google Fonts (variable, +italic) |
+| Red Hat Mono | `red-hat-mono/` | OFL 1.1 | Google Fonts (variable, +italic) |
+| Space Mono | `space-mono/` | OFL 1.1 | Google Fonts (static 4 styles) |
+| Martian Mono | `martian-mono/` | OFL 1.1 | Google Fonts (variable: wght+wdth) |
+| Intel One Mono | `intel-one-mono/` | OFL 1.1 | Google Fonts (variable, +italic) |
 
 ## Proportional / sans-serif (UI)
 
@@ -33,6 +38,11 @@ fonts). Files from official GitHub repos are full builds.
 | IBM Plex Sans | `ibm-plex-sans/` | OFL 1.1 | Google Fonts (variable, +italic) |
 | Nunito Sans | `nunito-sans/` | OFL 1.1 | Google Fonts (variable, +italic) |
 | Work Sans | `work-sans/` | OFL 1.1 | Google Fonts (variable, +italic) |
+| Public Sans | `public-sans/` | OFL 1.1 | Google Fonts (variable, +italic) |
+| Figtree | `figtree/` | OFL 1.1 | Google Fonts (variable, +italic) |
+| DM Sans | `dm-sans/` | OFL 1.1 | Google Fonts (variable: wght+opsz, +italic) |
+| Manrope | `manrope/` | OFL 1.1 | Google Fonts (variable) |
+| Rubik | `rubik/` | OFL 1.1 | Google Fonts (variable, +italic) |
 
 ## License notes
 

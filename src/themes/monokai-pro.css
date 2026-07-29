@@ -1,0 +1,26 @@
+html[data-gct-theme="monokai-pro"] {
+  --gct-color-scheme: dark;
+  --gct-bg: #2d2a2e;
+  --gct-bg-subtle: #221f22;
+  --gct-bg-inset: #19181a;
+  --gct-bg-overlay: #403e41;
+  --gct-fg: #fcfcfa;
+  --gct-fg-muted: #939293;
+  --gct-border: #403e41;
+  --gct-accent: #78dce8;
+  --gct-red: #ff6188;
+  --gct-orange: #fc9867;
+  --gct-yellow: #ffd866;
+  --gct-green: #a9dc76;
+  --gct-cyan: #78dce8;
+  --gct-blue: #78dce8;
+  --gct-purple: #ab9df2;
+  --gct-pink: #ff6188;
+  --gct-syn-comment: #727072;
+  --gct-syn-keyword: var(--gct-pink);
+  --gct-syn-string: var(--gct-yellow);
+  --gct-syn-entity: var(--gct-green);
+  --gct-syn-constant: var(--gct-purple);
+  --gct-syn-tag: var(--gct-pink);
+  --gct-syn-heading: var(--gct-green);
+}

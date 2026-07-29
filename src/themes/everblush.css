@@ -1,0 +1,22 @@
+html[data-gct-theme="everblush"] {
+  --gct-color-scheme: dark;
+  --gct-bg: #141b1e;
+  --gct-bg-subtle: #1e2528;
+  --gct-bg-inset: #0f1416;
+  --gct-bg-overlay: #232a2d;
+  --gct-fg: #dadada;
+  --gct-fg-muted: #8a9295;
+  --gct-border: #2d3437;
+  --gct-accent: #67b0e8;
+  --gct-red: #e57474;
+  --gct-orange: #e5c76b;
+  --gct-yellow: #e5c76b;
+  --gct-green: #8ccf7e;
+  --gct-cyan: #6cbfbf;
+  --gct-blue: #67b0e8;
+  --gct-purple: #c47fd5;
+  --gct-pink: #c47fd5;
+  --gct-syn-comment: #6c7377;
+  --gct-syn-tag: var(--gct-cyan);
+  --gct-syn-heading: var(--gct-blue);
+}

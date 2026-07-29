@@ -1,0 +1,25 @@
+html[data-gct-theme="sonokai"] {
+  --gct-color-scheme: dark;
+  --gct-bg: #2c2e34;
+  --gct-bg-subtle: #33353f;
+  --gct-bg-inset: #23252c;
+  --gct-bg-overlay: #363944;
+  --gct-fg: #e2e2e3;
+  --gct-fg-muted: #7f8490;
+  --gct-border: #3b3e48;
+  --gct-accent: #76cce0;
+  --gct-red: #fc5d7c;
+  --gct-orange: #f39660;
+  --gct-yellow: #e7c664;
+  --gct-green: #9ed072;
+  --gct-cyan: #76cce0;
+  --gct-blue: #76cce0;
+  --gct-purple: #b39df3;
+  --gct-pink: #fc5d7c;
+  --gct-syn-comment: #7f8490;
+  --gct-syn-keyword: var(--gct-red);
+  --gct-syn-string: var(--gct-yellow);
+  --gct-syn-entity: var(--gct-green);
+  --gct-syn-constant: var(--gct-purple);
+  --gct-syn-heading: var(--gct-orange);
+}

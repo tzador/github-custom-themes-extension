@@ -1,0 +1,23 @@
+html[data-gct-theme="nightfox"] {
+  --gct-color-scheme: dark;
+  --gct-bg: #192330;
+  --gct-bg-subtle: #212e3f;
+  --gct-bg-inset: #131a24;
+  --gct-bg-overlay: #29394f;
+  --gct-fg: #cdcecf;
+  --gct-fg-muted: #738091;
+  --gct-border: #2b3b51;
+  --gct-accent: #719cd6;
+  --gct-red: #c94f6d;
+  --gct-orange: #f4a261;
+  --gct-yellow: #dbc074;
+  --gct-green: #81b29a;
+  --gct-cyan: #63cdcf;
+  --gct-blue: #719cd6;
+  --gct-purple: #9d79d6;
+  --gct-pink: #d67ad2;
+  --gct-syn-comment: #738091;
+  --gct-syn-constant: var(--gct-orange);
+  --gct-syn-tag: var(--gct-blue);
+  --gct-syn-heading: var(--gct-blue);
+}

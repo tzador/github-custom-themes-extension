@@ -1,0 +1,23 @@
+html[data-gct-theme="tokyo-night-day"] {
+  --gct-color-scheme: light;
+  --gct-bg: #e1e2e7;
+  --gct-bg-subtle: #d5d6db;
+  --gct-bg-inset: #cbccd1;
+  --gct-bg-overlay: #e9e9ed;
+  --gct-fg: #343b58;
+  --gct-fg-muted: #6a6f87;
+  --gct-border: #c1c2c7;
+  --gct-accent: #2e7de9;
+  --gct-red: #f52a65;
+  --gct-orange: #b15c00;
+  --gct-yellow: #8c6c3e;
+  --gct-green: #587539;
+  --gct-cyan: #007197;
+  --gct-blue: #2e7de9;
+  --gct-purple: #7847bd;
+  --gct-pink: #9854f1;
+  --gct-syn-comment: #9699a3;
+  --gct-syn-constant: var(--gct-orange);
+  --gct-syn-tag: var(--gct-cyan);
+  --gct-syn-heading: var(--gct-blue);
+}

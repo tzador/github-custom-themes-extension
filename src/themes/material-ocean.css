@@ -1,0 +1,24 @@
+html[data-gct-theme="material-ocean"] {
+  --gct-color-scheme: dark;
+  --gct-bg: #0f111a;
+  --gct-bg-subtle: #090b10;
+  --gct-bg-inset: #090b10;
+  --gct-bg-overlay: #1f2233;
+  --gct-fg: #babed8;
+  --gct-fg-muted: #8f93a2;
+  --gct-border: #232635;
+  --gct-accent: #82aaff;
+  --gct-red: #ff5370;
+  --gct-orange: #f78c6c;
+  --gct-yellow: #ffcb6b;
+  --gct-green: #c3e88d;
+  --gct-cyan: #89ddff;
+  --gct-blue: #82aaff;
+  --gct-purple: #c792ea;
+  --gct-pink: #f07178;
+  --gct-syn-comment: #464b5d;
+  --gct-syn-constant: var(--gct-orange);
+  --gct-syn-variable: var(--gct-pink);
+  --gct-syn-tag: var(--gct-pink);
+  --gct-syn-heading: var(--gct-cyan);
+}
