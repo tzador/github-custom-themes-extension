@@ -1,0 +1,25 @@
+html[data-gct-theme="catppuccin-latte"] {
+  --gct-color-scheme: light;
+  --gct-bg: #eff1f5;
+  --gct-bg-subtle: #e6e9ef;
+  --gct-bg-inset: #dce0e8;
+  --gct-bg-overlay: #eff1f5;
+  --gct-fg: #4c4f69;
+  --gct-fg-muted: #6c6f85;
+  --gct-border: #bcc0cc;
+  --gct-border-muted: #ccd0da;
+  --gct-accent: #1e66f5;
+  --gct-red: #d20f39;
+  --gct-orange: #fe640b;
+  --gct-yellow: #df8e1d;
+  --gct-green: #40a02b;
+  --gct-cyan: #04a5e5;
+  --gct-blue: #1e66f5;
+  --gct-purple: #8839ef;
+  --gct-pink: #ea76cb;
+  --gct-syn-comment: #7c7f93;
+  --gct-syn-constant: var(--gct-orange);
+  --gct-syn-tag: #179299;
+  --gct-syn-variable: var(--gct-red);
+  --gct-syn-heading: var(--gct-blue);
+}

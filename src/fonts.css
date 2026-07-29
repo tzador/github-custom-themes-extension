@@ -1,0 +1,337 @@
+/*
+ * @font-face rules for the bundled fonts in public/fonts/.
+ * font-family names match `name` in fonts.ts.
+ *
+ * This CSS is injected as a content script, so font URLs must point at the
+ * extension origin; Chrome replaces __MSG_@@extension_id__ in content-script
+ * CSS. The fonts also need to be listed under web_accessible_resources in
+ * manifest.json.
+ */
+
+/* ---------- sans ---------- */
+
+@font-face {
+  font-family: "Mona Sans";
+  src: url("chrome-extension://__MSG_@@extension_id__/fonts/mona-sans/MonaSans-Var.woff2") format("woff2");
+  font-weight: 200 900;
+  font-stretch: 75% 125%;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Mona Sans";
+  src: url("chrome-extension://__MSG_@@extension_id__/fonts/mona-sans/MonaSans-Italic-Var.woff2") format("woff2");
+  font-weight: 200 900;
+  font-stretch: 75% 125%;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Hubot Sans";
+  src: url("chrome-extension://__MSG_@@extension_id__/fonts/hubot-sans/HubotSans-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Hubot Sans";
+  src: url("chrome-extension://__MSG_@@extension_id__/fonts/hubot-sans/HubotSans-Italic.woff2") format("woff2");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Hubot Sans";
+  src: url("chrome-extension://__MSG_@@extension_id__/fonts/hubot-sans/HubotSans-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Hubot Sans";
+  src: url("chrome-extension://__MSG_@@extension_id__/fonts/hubot-sans/HubotSans-BoldItalic.woff2") format("woff2");
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("chrome-extension://__MSG_@@extension_id__/fonts/inter/InterVariable.woff2") format("woff2");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Inter";
+  src: url("chrome-extension://__MSG_@@extension_id__/fonts/inter/InterVariable-Italic.woff2") format("woff2");
+  font-weight: 100 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Source Sans 3";
+  src: url("chrome-extension://__MSG_@@extension_id__/fonts/source-sans-3/SourceSans3-Var.woff2") format("woff2");
+  font-weight: 200 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Source Sans 3";
+  src: url("chrome-extension://__MSG_@@extension_id__/fonts/source-sans-3/SourceSans3-Italic-Var.woff2") format("woff2");
+  font-weight: 200 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "IBM Plex Sans";
+  src: url("chrome-extension://__MSG_@@extension_id__/fonts/ibm-plex-sans/IBMPlexSans-Var.woff2") format("woff2");
+  font-weight: 100 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "IBM Plex Sans";
+  src: url("chrome-extension://__MSG_@@extension_id__/fonts/ibm-plex-sans/IBMPlexSans-Italic-Var.woff2") format("woff2");
+  font-weight: 100 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Nunito Sans";
+  src: url("chrome-extension://__MSG_@@extension_id__/fonts/nunito-sans/NunitoSans-Var.woff2") format("woff2");
+  font-weight: 200 1000;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Nunito Sans";
+  src: url("chrome-extension://__MSG_@@extension_id__/fonts/nunito-sans/NunitoSans-Italic-Var.woff2") format("woff2");
+  font-weight: 200 1000;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Work Sans";
+  src: url("chrome-extension://__MSG_@@extension_id__/fonts/work-sans/WorkSans-Var.woff2") format("woff2");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Work Sans";
+  src: url("chrome-extension://__MSG_@@extension_id__/fonts/work-sans/WorkSans-Italic-Var.woff2") format("woff2");
+  font-weight: 100 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* ---------- mono ---------- */
+
+@font-face {
+  font-family: "JetBrains Mono";
+  src: url("chrome-extension://__MSG_@@extension_id__/fonts/jetbrains-mono/JetBrainsMono-Var.woff2") format("woff2");
+  font-weight: 100 800;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "JetBrains Mono";
+  src: url("chrome-extension://__MSG_@@extension_id__/fonts/jetbrains-mono/JetBrainsMono-Italic-Var.woff2") format("woff2");
+  font-weight: 100 800;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Fira Code";
+  src: url("chrome-extension://__MSG_@@extension_id__/fonts/fira-code/FiraCode-Var.woff2") format("woff2");
+  font-weight: 300 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Cascadia Code";
+  src: url("chrome-extension://__MSG_@@extension_id__/fonts/cascadia-code/CascadiaCode-Var.woff2") format("woff2");
+  font-weight: 200 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Cascadia Code";
+  src: url("chrome-extension://__MSG_@@extension_id__/fonts/cascadia-code/CascadiaCode-Italic-Var.woff2") format("woff2");
+  font-weight: 200 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Source Code Pro";
+  src: url("chrome-extension://__MSG_@@extension_id__/fonts/source-code-pro/SourceCodePro-Var.woff2") format("woff2");
+  font-weight: 200 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Source Code Pro";
+  src: url("chrome-extension://__MSG_@@extension_id__/fonts/source-code-pro/SourceCodePro-Italic-Var.woff2") format("woff2");
+  font-weight: 200 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "IBM Plex Mono";
+  src: url("chrome-extension://__MSG_@@extension_id__/fonts/ibm-plex-mono/IBMPlexMono-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "IBM Plex Mono";
+  src: url("chrome-extension://__MSG_@@extension_id__/fonts/ibm-plex-mono/IBMPlexMono-Italic.woff2") format("woff2");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "IBM Plex Mono";
+  src: url("chrome-extension://__MSG_@@extension_id__/fonts/ibm-plex-mono/IBMPlexMono-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Geist Mono";
+  src: url("chrome-extension://__MSG_@@extension_id__/fonts/geist-mono/GeistMono-Var.woff2") format("woff2");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Commit Mono";
+  src: url("chrome-extension://__MSG_@@extension_id__/fonts/commit-mono/CommitMono-400-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Commit Mono";
+  src: url("chrome-extension://__MSG_@@extension_id__/fonts/commit-mono/CommitMono-400-Italic.woff2") format("woff2");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Commit Mono";
+  src: url("chrome-extension://__MSG_@@extension_id__/fonts/commit-mono/CommitMono-700-Regular.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Commit Mono";
+  src: url("chrome-extension://__MSG_@@extension_id__/fonts/commit-mono/CommitMono-700-Italic.woff2") format("woff2");
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Monaspace Neon";
+  src: url("chrome-extension://__MSG_@@extension_id__/fonts/monaspace-neon/MonaspaceNeonVar.woff2") format("woff2");
+  font-weight: 200 800;
+  font-stretch: 100% 125%;
+  font-style: oblique 0deg 11deg;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Hack";
+  src: url("chrome-extension://__MSG_@@extension_id__/fonts/hack/hack-regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Hack";
+  src: url("chrome-extension://__MSG_@@extension_id__/fonts/hack/hack-italic.woff2") format("woff2");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Hack";
+  src: url("chrome-extension://__MSG_@@extension_id__/fonts/hack/hack-bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Hack";
+  src: url("chrome-extension://__MSG_@@extension_id__/fonts/hack/hack-bolditalic.woff2") format("woff2");
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* ---------- font selection via data attributes ---------- */
+/* data-gct-font-* values are slugs from fonts.ts */
+
+html[data-gct-font-sans="mona-sans"] {
+  --gct-font-sans: "Mona Sans";
+}
+html[data-gct-font-sans="hubot-sans"] {
+  --gct-font-sans: "Hubot Sans";
+}
+html[data-gct-font-sans="inter"] {
+  --gct-font-sans: "Inter";
+}
+html[data-gct-font-sans="source-sans-3"] {
+  --gct-font-sans: "Source Sans 3";
+}
+html[data-gct-font-sans="ibm-plex-sans"] {
+  --gct-font-sans: "IBM Plex Sans";
+}
+html[data-gct-font-sans="nunito-sans"] {
+  --gct-font-sans: "Nunito Sans";
+}
+html[data-gct-font-sans="work-sans"] {
+  --gct-font-sans: "Work Sans";
+}
+
+html[data-gct-font-mono="jetbrains-mono"] {
+  --gct-font-mono: "JetBrains Mono";
+}
+html[data-gct-font-mono="fira-code"] {
+  --gct-font-mono: "Fira Code";
+}
+html[data-gct-font-mono="cascadia-code"] {
+  --gct-font-mono: "Cascadia Code";
+}
+html[data-gct-font-mono="source-code-pro"] {
+  --gct-font-mono: "Source Code Pro";
+}
+html[data-gct-font-mono="ibm-plex-mono"] {
+  --gct-font-mono: "IBM Plex Mono";
+}
+html[data-gct-font-mono="geist-mono"] {
+  --gct-font-mono: "Geist Mono";
+}
+html[data-gct-font-mono="commit-mono"] {
+  --gct-font-mono: "Commit Mono";
+}
+html[data-gct-font-mono="monaspace-neon"] {
+  --gct-font-mono: "Monaspace Neon";
+}
+html[data-gct-font-mono="hack"] {
+  --gct-font-mono: "Hack";
+}

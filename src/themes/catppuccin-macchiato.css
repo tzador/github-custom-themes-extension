@@ -1,0 +1,25 @@
+html[data-gct-theme="catppuccin-macchiato"] {
+  --gct-color-scheme: dark;
+  --gct-bg: #24273a;
+  --gct-bg-subtle: #1e2030;
+  --gct-bg-inset: #181926;
+  --gct-bg-overlay: #363a4f;
+  --gct-fg: #cad3f5;
+  --gct-fg-muted: #a5adcb;
+  --gct-border: #494d64;
+  --gct-border-muted: #363a4f;
+  --gct-accent: #8aadf4;
+  --gct-red: #ed8796;
+  --gct-orange: #f5a97f;
+  --gct-yellow: #eed49f;
+  --gct-green: #a6da95;
+  --gct-cyan: #91d7e3;
+  --gct-blue: #8aadf4;
+  --gct-purple: #c6a0f6;
+  --gct-pink: #f5bde6;
+  --gct-syn-comment: #6e738d;
+  --gct-syn-constant: var(--gct-orange);
+  --gct-syn-tag: var(--gct-cyan);
+  --gct-syn-variable: var(--gct-red);
+  --gct-syn-heading: var(--gct-blue);
+}

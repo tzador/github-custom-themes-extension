@@ -1,0 +1,26 @@
+html[data-gct-theme="dracula"] {
+  --gct-color-scheme: dark;
+  --gct-bg: #282a36;
+  --gct-bg-subtle: #21222c;
+  --gct-bg-inset: #191a21;
+  --gct-bg-overlay: #343746;
+  --gct-fg: #f8f8f2;
+  --gct-fg-muted: #a3a8c8;
+  --gct-border: #44475a;
+  --gct-accent: #bd93f9;
+  --gct-accent-emphasis: #7b5fb8;
+  --gct-red: #ff5555;
+  --gct-orange: #ffb86c;
+  --gct-yellow: #f1fa8c;
+  --gct-green: #50fa7b;
+  --gct-cyan: #8be9fd;
+  --gct-purple: #bd93f9;
+  --gct-pink: #ff79c6;
+  --gct-syn-comment: #6272a4;
+  --gct-syn-keyword: var(--gct-pink);
+  --gct-syn-string: var(--gct-yellow);
+  --gct-syn-entity: var(--gct-green);
+  --gct-syn-constant: var(--gct-purple);
+  --gct-syn-tag: var(--gct-pink);
+  --gct-syn-heading: var(--gct-purple);
+}

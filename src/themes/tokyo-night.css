@@ -1,0 +1,25 @@
+html[data-gct-theme="tokyo-night"] {
+  --gct-color-scheme: dark;
+  --gct-bg: #1a1b26;
+  --gct-bg-subtle: #16161e;
+  --gct-bg-inset: #13131a;
+  --gct-bg-overlay: #24283b;
+  --gct-fg: #c0caf5;
+  --gct-fg-muted: #a9b1d6;
+  --gct-border: #292e42;
+  --gct-accent: #7aa2f7;
+  --gct-accent-emphasis: #3d59a1;
+  --gct-red: #f7768e;
+  --gct-orange: #ff9e64;
+  --gct-yellow: #e0af68;
+  --gct-green: #9ece6a;
+  --gct-cyan: #7dcfff;
+  --gct-blue: #7aa2f7;
+  --gct-purple: #bb9af7;
+  --gct-pink: #bb9af7;
+  --gct-syn-comment: #565f89;
+  --gct-syn-constant: var(--gct-orange);
+  --gct-syn-tag: var(--gct-cyan);
+  --gct-syn-variable: var(--gct-fg);
+  --gct-syn-heading: var(--gct-blue);
+}

@@ -1,0 +1,27 @@
+{
+  "manifest_version": 3,
+  "name": "GitHub Custom Themes",
+  "description": "Beautiful custom styling themes for GitHub website.",
+  "icons": {
+    "16": "icon.png",
+    "32": "icon.png",
+    "48": "icon.png",
+    "128": "icon.png"
+  },
+  "permissions": ["storage"],
+  "host_permissions": ["https://github.com/*", "https://gist.github.com/*"],
+  "web_accessible_resources": [
+    {
+      "resources": ["fonts/*", "icon.svg"],
+      "matches": ["https://github.com/*", "https://gist.github.com/*"]
+    }
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://github.com/*", "https://gist.github.com/*"],
+      "css": ["style.css", "fonts.css"],
+      "js": ["script.js"],
+      "run_at": "document_start"
+    }
+  ]
+}

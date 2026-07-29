@@ -1,0 +1,199 @@
+/*
+ * Applies the fonts selected via the html[data-gct-font-*] attributes.
+ * fonts.css maps those attributes to the --gct-font-sans / --gct-font-mono
+ * variables; here they are wired into GitHub's UI, both through Primer's
+ * font-stack custom properties and directly on elements whose rules hardcode
+ * a font stack.
+ */
+
+html[data-gct-font-sans] {
+  --fontStack-default:
+    var(--gct-font-sans), -apple-system, BlinkMacSystemFont, "Segoe UI",
+    "Noto Sans", Helvetica, Arial, sans-serif;
+  --fontStack-sansSerif:
+    var(--gct-font-sans), -apple-system, BlinkMacSystemFont, "Segoe UI",
+    "Noto Sans", Helvetica, Arial, sans-serif;
+  --fontStack-system:
+    var(--gct-font-sans), -apple-system, BlinkMacSystemFont, "Segoe UI",
+    "Noto Sans", Helvetica, Arial, sans-serif;
+}
+
+html[data-gct-font-sans]
+  :is(body, button, input, select, textarea, .markdown-body) {
+  font-family:
+    var(--gct-font-sans),
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    "Noto Sans",
+    Helvetica,
+    Arial,
+    sans-serif !important;
+}
+
+html[data-gct-font-mono] {
+  --fontStack-monospace:
+    var(--gct-font-mono), ui-monospace, SFMono-Regular, "SF Mono", Menlo,
+    Consolas, "Liberation Mono", monospace;
+}
+
+/* Keep this rule after the sans one so code-editing textareas stay monospace. */
+html[data-gct-font-mono]
+  :is(
+    pre,
+    code,
+    kbd,
+    samp,
+    tt,
+    .text-mono,
+    .blob-code,
+    .blob-num,
+    .react-code-text,
+    .react-file-line,
+    .cm-content,
+    .CodeMirror,
+    .file-editor-textarea,
+    .input-monospace
+  ) {
+  font-family:
+    var(--gct-font-mono), ui-monospace, SFMono-Regular, "SF Mono", Menlo,
+    Consolas, "Liberation Mono", monospace !important;
+}
+
+/* ---------- extension UI: floating button + drawer ---------- */
+
+.gct-fab {
+  position: fixed;
+  right: 16px;
+  bottom: 16px;
+  z-index: 2147483600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  padding: 0;
+  border: 1px solid var(--borderColor-default, #d0d7de);
+  border-radius: 50%;
+  background: var(--bgColor-default, #fff);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  transition: transform 0.15s ease;
+}
+.gct-fab:hover {
+  transform: scale(1.08);
+}
+.gct-fab img {
+  width: 28px;
+  height: 28px;
+}
+
+.gct-drawer {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 2147483601;
+  height: 100dvh;
+  width: 340px;
+  max-width: 90vw;
+  display: flex;
+  flex-direction: column;
+  background: var(--bgColor-default, #fff);
+  color: var(--fgColor-default, #1f2328);
+  border-left: 1px solid var(--borderColor-default, #d0d7de);
+  transform: translateX(100%);
+  transition:
+    transform 0.2s ease,
+    visibility 0.2s;
+  visibility: hidden;
+}
+.gct-drawer.gct-open {
+  transform: translateX(0);
+  visibility: visible;
+  box-shadow: -8px 0 24px rgba(0, 0, 0, 0.15);
+}
+
+.gct-drawer-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--borderColor-default, #d0d7de);
+}
+.gct-drawer-title {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+}
+.gct-drawer-close {
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border: none;
+  border-radius: 6px;
+  background: transparent;
+  color: var(--fgColor-muted, #656d76);
+  font-size: 20px;
+  line-height: 1;
+  cursor: pointer;
+}
+.gct-drawer-close:hover {
+  background: var(--bgColor-neutral-muted, rgba(175, 184, 193, 0.2));
+}
+
+.gct-drawer-body {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 12px 16px;
+}
+
+.gct-drawer-footer {
+  padding: 12px 16px;
+  border-top: 1px solid var(--borderColor-default, #d0d7de);
+  color: var(--fgColor-muted, #656d76);
+  font-size: 12px;
+}
+
+.gct-section {
+  flex: 1 1 0;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+}
+.gct-section-title {
+  margin: 0 0 6px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--fgColor-muted, #656d76);
+}
+
+.gct-font-list {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  border: 1px solid var(--borderColor-default, #d0d7de);
+  border-radius: 6px;
+}
+.gct-font-option {
+  display: block;
+  width: 100%;
+  padding: 6px 10px;
+  border: none;
+  background: transparent;
+  color: inherit;
+  font-size: 14px;
+  text-align: left;
+  cursor: pointer;
+}
+.gct-font-option:hover {
+  background: var(--bgColor-neutral-muted, rgba(175, 184, 193, 0.2));
+}
+.gct-font-option.gct-selected {
+  background: var(--bgColor-accent-muted, #ddf4ff);
+  color: var(--fgColor-accent, #0969da);
+}

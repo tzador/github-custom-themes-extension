@@ -1,0 +1,25 @@
+html[data-gct-theme="catppuccin-frappe"] {
+  --gct-color-scheme: dark;
+  --gct-bg: #303446;
+  --gct-bg-subtle: #292c3c;
+  --gct-bg-inset: #232634;
+  --gct-bg-overlay: #414559;
+  --gct-fg: #c6d0f5;
+  --gct-fg-muted: #a5adce;
+  --gct-border: #51576d;
+  --gct-border-muted: #414559;
+  --gct-accent: #8caaee;
+  --gct-red: #e78284;
+  --gct-orange: #ef9f76;
+  --gct-yellow: #e5c890;
+  --gct-green: #a6d189;
+  --gct-cyan: #99d1db;
+  --gct-blue: #8caaee;
+  --gct-purple: #ca9ee6;
+  --gct-pink: #f4b8e4;
+  --gct-syn-comment: #737994;
+  --gct-syn-constant: var(--gct-orange);
+  --gct-syn-tag: var(--gct-cyan);
+  --gct-syn-variable: var(--gct-red);
+  --gct-syn-heading: var(--gct-blue);
+}
