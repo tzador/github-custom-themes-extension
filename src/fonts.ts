@@ -19,6 +19,12 @@ export const fonts: { sans: Font[]; mono: Font[] } = {
     { name: "DM Sans", slug: "dm-sans" },
     { name: "Manrope", slug: "manrope" },
     { name: "Rubik", slug: "rubik" },
+    { name: "Geist", slug: "geist" },
+    { name: "Space Grotesk", slug: "space-grotesk" },
+    { name: "Plus Jakarta Sans", slug: "plus-jakarta-sans" },
+    { name: "Outfit", slug: "outfit" },
+    { name: "Lexend", slug: "lexend" },
+    { name: "Instrument Sans", slug: "instrument-sans" },
   ],
   mono: [
     { name: "JetBrains Mono", slug: "jetbrains-mono" },
@@ -35,5 +41,10 @@ export const fonts: { sans: Font[]; mono: Font[] } = {
     { name: "Space Mono", slug: "space-mono" },
     { name: "Martian Mono", slug: "martian-mono" },
     { name: "Intel One Mono", slug: "intel-one-mono" },
+    { name: "Roboto Mono", slug: "roboto-mono" },
+    { name: "Google Sans Code", slug: "google-sans-code" },
+    { name: "Ubuntu Sans Mono", slug: "ubuntu-sans-mono" },
+    { name: "Sometype Mono", slug: "sometype-mono" },
+    { name: "DM Mono", slug: "dm-mono" },
   ],
 };

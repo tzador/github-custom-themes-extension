@@ -1,0 +1,26 @@
+html[data-gct-theme="xcode-light"] {
+  --gct-color-scheme: light;
+  --gct-bg: #ffffff;
+  --gct-bg-subtle: #f6f6f6;
+  --gct-bg-inset: #ececec;
+  --gct-bg-overlay: #ffffff;
+  --gct-fg: #262626;
+  --gct-fg-muted: #6c7986;
+  --gct-border: #e3e3e3;
+  --gct-accent: #0071e3;
+  --gct-accent-emphasis: #0058b0;
+  --gct-red: #d12f1b;
+  --gct-orange: #b45309;
+  --gct-yellow: #a67c00;
+  --gct-green: #007400;
+  --gct-cyan: #0e7c95;
+  --gct-blue: #272ad8;
+  --gct-purple: #703daa;
+  --gct-pink: #ad3da4;
+  --gct-syn-comment: #707f8c;
+  --gct-syn-keyword: var(--gct-pink);
+  --gct-syn-string: var(--gct-red);
+  --gct-syn-entity: var(--gct-purple);
+  --gct-syn-constant: var(--gct-blue);
+  --gct-syn-tag: var(--gct-pink);
+}

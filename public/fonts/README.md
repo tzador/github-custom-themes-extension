@@ -26,6 +26,11 @@ fonts). Files from official GitHub repos are full builds.
 | Space Mono | `space-mono/` | OFL 1.1 | Google Fonts (static 4 styles) |
 | Martian Mono | `martian-mono/` | OFL 1.1 | Google Fonts (variable: wght+wdth) |
 | Intel One Mono | `intel-one-mono/` | OFL 1.1 | Google Fonts (variable, +italic) |
+| Roboto Mono | `roboto-mono/` | OFL 1.1 | Google Fonts (variable, +italic) |
+| Google Sans Code | `google-sans-code/` | OFL 1.1 | Google Fonts (variable, +italic) |
+| Ubuntu Sans Mono | `ubuntu-sans-mono/` | UFL 1.0 | Google Fonts (variable, +italic) |
+| Sometype Mono | `sometype-mono/` | OFL 1.1 | Google Fonts (variable, +italic) |
+| DM Mono | `dm-mono/` | OFL 1.1 | Google Fonts (static 400/400i/500/500i; 500 serves as bold) |
 
 ## Proportional / sans-serif (UI)
 
@@ -43,10 +48,18 @@ fonts). Files from official GitHub repos are full builds.
 | DM Sans | `dm-sans/` | OFL 1.1 | Google Fonts (variable: wght+opsz, +italic) |
 | Manrope | `manrope/` | OFL 1.1 | Google Fonts (variable) |
 | Rubik | `rubik/` | OFL 1.1 | Google Fonts (variable, +italic) |
+| Geist | `geist/` | OFL 1.1 | Google Fonts (variable, +italic) |
+| Space Grotesk | `space-grotesk/` | OFL 1.1 | Google Fonts (variable) |
+| Plus Jakarta Sans | `plus-jakarta-sans/` | OFL 1.1 | Google Fonts (variable, +italic) |
+| Outfit | `outfit/` | OFL 1.1 | Google Fonts (variable) |
+| Lexend | `lexend/` | OFL 1.1 | Google Fonts (variable) |
+| Instrument Sans | `instrument-sans/` | OFL 1.1 | Google Fonts (variable, +italic) |
 
 ## License notes
 
 - **OFL 1.1**: bundle/redistribute/embed freely (including commercially); keep the
   license file with the fonts; you may not sell the font files by themselves.
 - **MIT + Bitstream Vera (Hack)**: same practical effect — attribution + license text.
+- **UFL 1.0 (Ubuntu Sans Mono)**: same practical effect — redistribute freely with the
+  licence file; derivatives must be renamed.
 - No license requires attribution in the extension UI.

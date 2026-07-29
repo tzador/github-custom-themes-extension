@@ -2,6 +2,8 @@ import "./style.css";
 import "./theme.css";
 import { fonts, type Font } from "./fonts.ts";
 import { themes, type Theme } from "./themes.ts";
+import { createPopper, type Instance } from "@popperjs/core";
+import githubLogoSvg from "@phosphor-icons/core/assets/regular/github-logo.svg?raw";
 
 const html = document.documentElement;
 
@@ -111,16 +113,83 @@ interface Item {
   slug: string;
 }
 
+/*
+ * A single shared popover element, repositioned next to whichever theme
+ * option is hovered. Popper keeps it inside the viewport.
+ */
+let popoverEl: HTMLDivElement | null = null;
+let popoverTitle: HTMLElement;
+let popoverText: HTMLElement;
+let popperInstance: Instance | null = null;
+let popoverTimer: number | undefined;
+
+function ensurePopover(): HTMLDivElement {
+  if (!popoverEl) {
+    popoverEl = document.createElement("div");
+    popoverEl.className = "gct-popover";
+
+    popoverTitle = document.createElement("h4");
+    popoverTitle.className = "gct-popover-title";
+
+    popoverText = document.createElement("p");
+    popoverText.className = "gct-popover-text";
+
+    const arrow = document.createElement("div");
+    arrow.className = "gct-popover-arrow";
+    arrow.dataset.popperArrow = "";
+
+    popoverEl.append(popoverTitle, popoverText, arrow);
+    document.body.append(popoverEl);
+  }
+  return popoverEl;
+}
+
+function hidePopover() {
+  window.clearTimeout(popoverTimer);
+  popoverEl?.classList.remove("gct-visible");
+  popperInstance?.destroy();
+  popperInstance = null;
+}
+
+function attachPopover(button: HTMLButtonElement, name: string, about: string) {
+  const show = () => {
+    window.clearTimeout(popoverTimer);
+    // Small delay so skimming the list doesn't flash popovers.
+    popoverTimer = window.setTimeout(() => {
+      const popover = ensurePopover();
+      popoverTitle.textContent = name;
+      popoverText.textContent = about;
+      popover.classList.add("gct-visible");
+      popperInstance?.destroy();
+      popperInstance = createPopper(button, popover, {
+        placement: "left",
+        modifiers: [
+          { name: "offset", options: { offset: [0, 12] } },
+          { name: "preventOverflow", options: { padding: 8 } },
+          { name: "arrow", options: { padding: 8 } },
+        ],
+      });
+    }, 250);
+  };
+
+  button.addEventListener("mouseenter", show);
+  button.addEventListener("mouseleave", hidePopover);
+  button.addEventListener("click", hidePopover);
+}
+
 const sectionSyncs: (() => void)[] = [];
 const syncSections = () => sectionSyncs.forEach((sync) => sync());
 
-function listSection(
+// One entry per accordion section, so opening one can collapse the rest.
+const accordionToggles: ((open: boolean) => void)[] = [];
+
+function listSection<T extends Item>(
   label: string,
-  items: Item[],
+  items: T[],
   api: {
     isSelected: (slug: string) => boolean;
     select: (slug: string) => void;
-    decorate?: (item: Item, button: HTMLButtonElement) => void;
+    decorate?: (item: T, button: HTMLButtonElement) => void;
   },
 ): HTMLElement {
   const section = document.createElement("section");
@@ -128,10 +197,19 @@ function listSection(
 
   const title = document.createElement("h3");
   title.className = "gct-section-title";
-  title.textContent = label;
+
+  const header = document.createElement("button");
+  header.type = "button";
+  header.className = "gct-section-header";
+  header.setAttribute("aria-expanded", "false");
+
+  header.textContent = label;
+  title.append(header);
 
   const listEl = document.createElement("div");
   listEl.className = "gct-font-list";
+  // Scrolling moves the hovered option away from the popover's anchor.
+  listEl.addEventListener("scroll", hidePopover);
 
   const options: Item[] = [{ name: "Default", slug: "" }, ...items];
   const buttons: HTMLButtonElement[] = [];
@@ -142,7 +220,8 @@ function listSection(
     button.className = "gct-font-option";
     button.dataset.slug = item.slug;
     button.textContent = item.name;
-    if (item.slug) api.decorate?.(item, button);
+    // The synthetic "Default" entry is a plain Item; real entries are T.
+    if (item.slug) api.decorate?.(item as T, button);
 
     button.addEventListener("click", () => {
       api.select(item.slug);
@@ -191,6 +270,20 @@ function listSection(
     syncSections();
   });
 
+  const setOpen = (open: boolean) => {
+    section.classList.toggle("gct-expanded", open);
+    header.setAttribute("aria-expanded", String(open));
+  };
+  accordionToggles.push(setOpen);
+
+  // Exactly one section stays open: clicking the open header is a no-op.
+  header.addEventListener("click", () => {
+    if (section.classList.contains("gct-expanded")) return;
+    accordionToggles.forEach((toggle) => toggle(false));
+    setOpen(true);
+    hidePopover();
+  });
+
   section.append(title, listEl);
   return section;
 }
@@ -232,6 +325,9 @@ function themeSection(
         slug ? JSON.stringify({ slug, mode }) : null,
       );
     },
+    decorate: (item, button) => {
+      attachPopover(button, item.name, item.about);
+    },
   });
 }
 
@@ -268,21 +364,35 @@ function injectUi() {
   const body = document.createElement("div");
   body.className = "gct-drawer-body";
   body.append(
-    fontSection("Sans font", "gctFontSans", storageKeys.fontSans, fonts.sans),
-    fontSection("Mono font", "gctFontMono", storageKeys.fontMono, fonts.mono),
-    themeSection("Light theme", "light", themes.light),
-    themeSection("Dark theme", "dark", themes.dark),
+    themeSection("Light themes", "light", themes.light),
+    themeSection("Dark themes", "dark", themes.dark),
+    fontSection("Text font", "gctFontSans", storageKeys.fontSans, fonts.sans),
+    fontSection("Code font", "gctFontMono", storageKeys.fontMono, fonts.mono),
   );
   syncSections();
+  accordionToggles[0]?.(true);
 
   const footer = document.createElement("footer");
   footer.className = "gct-drawer-footer";
-  footer.textContent = "TODO";
+
+  const credit = document.createElement("span");
+  credit.textContent = "Made with love by @tzador";
+
+  const repoLink = document.createElement("a");
+  repoLink.className = "gct-footer-link";
+  repoLink.href = "https://github.com/tzador/github-custom-themes-extension";
+  repoLink.target = "_blank";
+  repoLink.rel = "noopener noreferrer";
+  repoLink.setAttribute("aria-label", "GitHub repository");
+  repoLink.innerHTML = githubLogoSvg;
+
+  footer.append(credit, repoLink);
 
   drawer.append(header, body, footer);
 
   const setOpen = (open: boolean) => {
     drawer.classList.toggle("gct-open", open);
+    if (!open) hidePopover();
   };
 
   button.addEventListener("click", () => {

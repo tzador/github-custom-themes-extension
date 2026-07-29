@@ -1,0 +1,26 @@
+html[data-gct-theme="darcula"] {
+  --gct-color-scheme: dark;
+  --gct-bg: #2b2b2b;
+  --gct-bg-subtle: #313335;
+  --gct-bg-inset: #232525;
+  --gct-bg-overlay: #3c3f41;
+  --gct-fg: #a9b7c6;
+  --gct-fg-muted: #808080;
+  --gct-border: #4e5254;
+  --gct-accent: #589df6;
+  --gct-red: #ff6b68;
+  --gct-orange: #cc7832;
+  --gct-yellow: #ffc66d;
+  --gct-green: #6a8759;
+  --gct-cyan: #299999;
+  --gct-blue: #6897bb;
+  --gct-purple: #9876aa;
+  --gct-pink: #ae8abe;
+  --gct-syn-comment: #808080;
+  --gct-syn-keyword: var(--gct-orange);
+  --gct-syn-string: var(--gct-green);
+  --gct-syn-entity: var(--gct-yellow);
+  --gct-syn-constant: var(--gct-purple);
+  --gct-syn-tag: var(--gct-yellow);
+  --gct-syn-heading: var(--gct-blue);
+}

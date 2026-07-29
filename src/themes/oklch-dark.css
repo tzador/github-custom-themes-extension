@@ -1,0 +1,30 @@
+/* Designed directly in the OKLCH colorspace: neutral surfaces share one hue
+   (275) and accents share one lightness/chroma band, so every color carries
+   identical perceptual weight. */
+html[data-gct-theme="oklch-dark"] {
+  --gct-color-scheme: dark;
+  --gct-bg: oklch(21% 0.018 275);
+  --gct-bg-subtle: oklch(24.5% 0.02 275);
+  --gct-bg-inset: oklch(17.5% 0.016 275);
+  --gct-bg-overlay: oklch(28% 0.022 275);
+  --gct-fg: oklch(92% 0.012 275);
+  --gct-fg-muted: oklch(71% 0.02 275);
+  --gct-border: oklch(33% 0.025 275);
+  --gct-accent: oklch(74% 0.13 255);
+  --gct-accent-emphasis: oklch(58% 0.16 255);
+  --gct-red: oklch(72% 0.17 22);
+  --gct-orange: oklch(76% 0.14 60);
+  --gct-yellow: oklch(84% 0.13 95);
+  --gct-green: oklch(78% 0.15 150);
+  --gct-cyan: oklch(80% 0.11 205);
+  --gct-blue: oklch(74% 0.13 255);
+  --gct-purple: oklch(73% 0.14 295);
+  --gct-pink: oklch(76% 0.14 345);
+  --gct-syn-comment: oklch(58% 0.03 275);
+  --gct-syn-keyword: var(--gct-purple);
+  --gct-syn-string: var(--gct-green);
+  --gct-syn-entity: var(--gct-blue);
+  --gct-syn-constant: var(--gct-cyan);
+  --gct-syn-tag: var(--gct-pink);
+  --gct-syn-heading: var(--gct-blue);
+}

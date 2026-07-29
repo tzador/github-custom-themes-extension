@@ -1,0 +1,28 @@
+/* Alabaster's philosophy: keywords stay foreground-colored, comments are
+   loud (red) — only strings, constants and definitions get color. */
+html[data-gct-theme="alabaster"] {
+  --gct-color-scheme: light;
+  --gct-bg: #ffffff;
+  --gct-bg-subtle: #f7f7f7;
+  --gct-bg-inset: #efefef;
+  --gct-bg-overlay: #ffffff;
+  --gct-fg: #222222;
+  --gct-fg-muted: #777777;
+  --gct-border: #e5e5e5;
+  --gct-accent: #325cc0;
+  --gct-red: #aa3731;
+  --gct-orange: #b0620e;
+  --gct-yellow: #b8860b;
+  --gct-green: #448c27;
+  --gct-cyan: #158a8a;
+  --gct-blue: #325cc0;
+  --gct-purple: #7a3e9d;
+  --gct-pink: #b8478d;
+  --gct-syn-comment: #aa3731;
+  --gct-syn-keyword: var(--gct-fg);
+  --gct-syn-string: var(--gct-green);
+  --gct-syn-entity: var(--gct-blue);
+  --gct-syn-constant: var(--gct-purple);
+  --gct-syn-tag: var(--gct-blue);
+  --gct-syn-heading: var(--gct-blue);
+}

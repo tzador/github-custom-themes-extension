@@ -199,6 +199,75 @@
   font-display: swap;
 }
 
+@font-face {
+  font-family: "Geist";
+  src: url("chrome-extension://__MSG_@@extension_id__/fonts/geist/Geist-Var.woff2") format("woff2");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Geist";
+  src: url("chrome-extension://__MSG_@@extension_id__/fonts/geist/Geist-Italic-Var.woff2") format("woff2");
+  font-weight: 100 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Space Grotesk";
+  src: url("chrome-extension://__MSG_@@extension_id__/fonts/space-grotesk/SpaceGrotesk-Var.woff2") format("woff2");
+  font-weight: 300 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Plus Jakarta Sans";
+  src: url("chrome-extension://__MSG_@@extension_id__/fonts/plus-jakarta-sans/PlusJakartaSans-Var.woff2") format("woff2");
+  font-weight: 200 800;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Plus Jakarta Sans";
+  src: url("chrome-extension://__MSG_@@extension_id__/fonts/plus-jakarta-sans/PlusJakartaSans-Italic-Var.woff2") format("woff2");
+  font-weight: 200 800;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Outfit";
+  src: url("chrome-extension://__MSG_@@extension_id__/fonts/outfit/Outfit-Var.woff2") format("woff2");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Lexend";
+  src: url("chrome-extension://__MSG_@@extension_id__/fonts/lexend/Lexend-Var.woff2") format("woff2");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Instrument Sans";
+  src: url("chrome-extension://__MSG_@@extension_id__/fonts/instrument-sans/InstrumentSans-Var.woff2") format("woff2");
+  font-weight: 400 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Instrument Sans";
+  src: url("chrome-extension://__MSG_@@extension_id__/fonts/instrument-sans/InstrumentSans-Italic-Var.woff2") format("woff2");
+  font-weight: 400 700;
+  font-style: italic;
+  font-display: swap;
+}
+
 /* ---------- mono ---------- */
 
 @font-face {
@@ -434,6 +503,96 @@
   font-display: swap;
 }
 
+@font-face {
+  font-family: "Roboto Mono";
+  src: url("chrome-extension://__MSG_@@extension_id__/fonts/roboto-mono/RobotoMono-Var.woff2") format("woff2");
+  font-weight: 100 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Roboto Mono";
+  src: url("chrome-extension://__MSG_@@extension_id__/fonts/roboto-mono/RobotoMono-Italic-Var.woff2") format("woff2");
+  font-weight: 100 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Google Sans Code";
+  src: url("chrome-extension://__MSG_@@extension_id__/fonts/google-sans-code/GoogleSansCode-Var.woff2") format("woff2");
+  font-weight: 300 800;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Google Sans Code";
+  src: url("chrome-extension://__MSG_@@extension_id__/fonts/google-sans-code/GoogleSansCode-Italic-Var.woff2") format("woff2");
+  font-weight: 300 800;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Ubuntu Sans Mono";
+  src: url("chrome-extension://__MSG_@@extension_id__/fonts/ubuntu-sans-mono/UbuntuSansMono-Var.woff2") format("woff2");
+  font-weight: 400 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Ubuntu Sans Mono";
+  src: url("chrome-extension://__MSG_@@extension_id__/fonts/ubuntu-sans-mono/UbuntuSansMono-Italic-Var.woff2") format("woff2");
+  font-weight: 400 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Sometype Mono";
+  src: url("chrome-extension://__MSG_@@extension_id__/fonts/sometype-mono/SometypeMono-Var.woff2") format("woff2");
+  font-weight: 400 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Sometype Mono";
+  src: url("chrome-extension://__MSG_@@extension_id__/fonts/sometype-mono/SometypeMono-Italic-Var.woff2") format("woff2");
+  font-weight: 400 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "DM Mono";
+  src: url("chrome-extension://__MSG_@@extension_id__/fonts/dm-mono/DMMono-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "DM Mono";
+  src: url("chrome-extension://__MSG_@@extension_id__/fonts/dm-mono/DMMono-Italic.woff2") format("woff2");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+/* DM Mono has no bold cut; Medium covers 500-700 so bold text isn't synthesized */
+@font-face {
+  font-family: "DM Mono";
+  src: url("chrome-extension://__MSG_@@extension_id__/fonts/dm-mono/DMMono-Medium.woff2") format("woff2");
+  font-weight: 500 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "DM Mono";
+  src: url("chrome-extension://__MSG_@@extension_id__/fonts/dm-mono/DMMono-MediumItalic.woff2") format("woff2");
+  font-weight: 500 700;
+  font-style: italic;
+  font-display: swap;
+}
+
 /* ---------- font selection via data attributes ---------- */
 /* data-gct-font-* values are slugs from fonts.ts */
 
@@ -472,6 +631,24 @@ html[data-gct-font-sans="manrope"] {
 }
 html[data-gct-font-sans="rubik"] {
   --gct-font-sans: "Rubik";
+}
+html[data-gct-font-sans="geist"] {
+  --gct-font-sans: "Geist";
+}
+html[data-gct-font-sans="space-grotesk"] {
+  --gct-font-sans: "Space Grotesk";
+}
+html[data-gct-font-sans="plus-jakarta-sans"] {
+  --gct-font-sans: "Plus Jakarta Sans";
+}
+html[data-gct-font-sans="outfit"] {
+  --gct-font-sans: "Outfit";
+}
+html[data-gct-font-sans="lexend"] {
+  --gct-font-sans: "Lexend";
+}
+html[data-gct-font-sans="instrument-sans"] {
+  --gct-font-sans: "Instrument Sans";
 }
 
 html[data-gct-font-mono="jetbrains-mono"] {
@@ -515,4 +692,19 @@ html[data-gct-font-mono="martian-mono"] {
 }
 html[data-gct-font-mono="intel-one-mono"] {
   --gct-font-mono: "Intel One Mono";
+}
+html[data-gct-font-mono="roboto-mono"] {
+  --gct-font-mono: "Roboto Mono";
+}
+html[data-gct-font-mono="google-sans-code"] {
+  --gct-font-mono: "Google Sans Code";
+}
+html[data-gct-font-mono="ubuntu-sans-mono"] {
+  --gct-font-mono: "Ubuntu Sans Mono";
+}
+html[data-gct-font-mono="sometype-mono"] {
+  --gct-font-mono: "Sometype Mono";
+}
+html[data-gct-font-mono="dm-mono"] {
+  --gct-font-mono: "DM Mono";
 }

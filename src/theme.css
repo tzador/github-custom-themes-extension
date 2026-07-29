@@ -94,6 +94,26 @@
 @import "./themes/selenized-light.css";
 @import "./themes/gruvbox-material-light.css";
 @import "./themes/tokyo-night-day.css";
+@import "./themes/darcula.css";
+@import "./themes/oxocarbon.css";
+@import "./themes/houston.css";
+@import "./themes/vesper.css";
+@import "./themes/min-dark.css";
+@import "./themes/city-lights.css";
+@import "./themes/duotone-dark.css";
+@import "./themes/shades-of-purple.css";
+@import "./themes/tailwind-midnight.css";
+@import "./themes/oklch-dark.css";
+@import "./themes/xcode-light.css";
+@import "./themes/min-light.css";
+@import "./themes/snazzy-light.css";
+@import "./themes/alabaster.css";
+@import "./themes/duotone-light.css";
+@import "./themes/bluloco-light.css";
+@import "./themes/dayfox.css";
+@import "./themes/modus-operandi.css";
+@import "./themes/tailwind-daylight.css";
+@import "./themes/open-color-light.css";
 
 /* Internal derivations (engine namespace only - never define --gct-* tokens
    that themes set, they would win the cascade over the theme files). */

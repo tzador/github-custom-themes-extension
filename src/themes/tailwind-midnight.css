@@ -1,0 +1,28 @@
+/* Built from the Tailwind CSS default palette: slate surfaces,
+   400-level accents (sky, rose, amber, emerald, violet, pink). */
+html[data-gct-theme="tailwind-midnight"] {
+  --gct-color-scheme: dark;
+  --gct-bg: #0f172a;
+  --gct-bg-subtle: #1e293b;
+  --gct-bg-inset: #020617;
+  --gct-bg-overlay: #263449;
+  --gct-fg: #e2e8f0;
+  --gct-fg-muted: #94a3b8;
+  --gct-border: #334155;
+  --gct-accent: #38bdf8;
+  --gct-accent-emphasis: #0284c7;
+  --gct-red: #fb7185;
+  --gct-orange: #fb923c;
+  --gct-yellow: #fbbf24;
+  --gct-green: #34d399;
+  --gct-cyan: #22d3ee;
+  --gct-blue: #60a5fa;
+  --gct-purple: #a78bfa;
+  --gct-pink: #f472b6;
+  --gct-syn-comment: #64748b;
+  --gct-syn-keyword: var(--gct-purple);
+  --gct-syn-string: var(--gct-green);
+  --gct-syn-entity: var(--gct-blue);
+  --gct-syn-constant: var(--gct-orange);
+  --gct-syn-tag: var(--gct-pink);
+}

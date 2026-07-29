@@ -1,0 +1,26 @@
+html[data-gct-theme="houston"] {
+  --gct-color-scheme: dark;
+  --gct-bg: #17191e;
+  --gct-bg-subtle: #1e2127;
+  --gct-bg-inset: #101218;
+  --gct-bg-overlay: #262a33;
+  --gct-fg: #eef0f9;
+  --gct-fg-muted: #858b98;
+  --gct-border: #343841;
+  --gct-accent: #54b9ff;
+  --gct-red: #f4587e;
+  --gct-orange: #ff9d5c;
+  --gct-yellow: #ffd493;
+  --gct-green: #4bf3c8;
+  --gct-cyan: #00daef;
+  --gct-blue: #54b9ff;
+  --gct-purple: #acafff;
+  --gct-pink: #f772b0;
+  --gct-syn-comment: #545864;
+  --gct-syn-keyword: var(--gct-purple);
+  --gct-syn-string: var(--gct-green);
+  --gct-syn-entity: var(--gct-blue);
+  --gct-syn-constant: var(--gct-cyan);
+  --gct-syn-tag: var(--gct-blue);
+  --gct-syn-heading: var(--gct-purple);
+}

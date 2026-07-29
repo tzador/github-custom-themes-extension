@@ -1,0 +1,27 @@
+/* Every fg/bg pairing in Modus Operandi targets WCAG AAA (7:1+). */
+html[data-gct-theme="modus-operandi"] {
+  --gct-color-scheme: light;
+  --gct-bg: #ffffff;
+  --gct-bg-subtle: #f2f2f2;
+  --gct-bg-inset: #e6e6e6;
+  --gct-bg-overlay: #ffffff;
+  --gct-fg: #000000;
+  --gct-fg-muted: #595959;
+  --gct-border: #d7d7d7;
+  --gct-accent: #0031a9;
+  --gct-red: #a60000;
+  --gct-orange: #8f4400;
+  --gct-yellow: #6f5500;
+  --gct-green: #006800;
+  --gct-cyan: #005e8b;
+  --gct-blue: #0031a9;
+  --gct-purple: #5317ac;
+  --gct-pink: #721045;
+  --gct-syn-comment: #595959;
+  --gct-syn-keyword: var(--gct-purple);
+  --gct-syn-string: #3548cf;
+  --gct-syn-entity: var(--gct-pink);
+  --gct-syn-constant: var(--gct-blue);
+  --gct-syn-tag: var(--gct-cyan);
+  --gct-syn-heading: var(--gct-fg);
+}

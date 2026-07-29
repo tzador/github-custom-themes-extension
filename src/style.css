@@ -146,43 +146,91 @@ html[data-gct-font-mono]
   min-height: 0;
   display: flex;
   flex-direction: column;
-  gap: 12px;
-  padding: 12px 16px;
 }
 
 .gct-drawer-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   padding: 12px 16px;
   border-top: 1px solid var(--borderColor-default, #d0d7de);
   color: var(--fgColor-muted, #656d76);
   font-size: 12px;
 }
+.gct-footer-link {
+  display: flex;
+  align-items: center;
+  color: inherit;
+}
+.gct-footer-link:hover {
+  color: var(--fgColor-accent, #0969da);
+}
+.gct-footer-link svg {
+  width: 16px;
+  height: 16px;
+}
 
+/* Accordion: collapsed sections shrink to their header, the open one
+   takes the remaining height and scrolls its list. */
 .gct-section {
-  flex: 1 1 0;
+  flex: 0 0 auto;
   min-height: 0;
   display: flex;
   flex-direction: column;
 }
+.gct-section.gct-expanded {
+  flex: 1 1 0;
+}
 .gct-section-title {
-  margin: 0 0 6px;
-  font-size: 12px;
+  margin: 0;
+  font-size: inherit;
+  font-weight: inherit;
+}
+.gct-section-header {
+  display: block;
+  width: 100%;
+  margin: 0;
+  padding: 8px 16px;
+  border: none;
+  border-bottom: 1px solid var(--borderColor-default, #d0d7de);
+  background: var(--bgColor-muted, #f6f8fa);
+  color: var(--fgColor-default, #1f2328);
+  font-size: 13px;
   font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
-  color: var(--fgColor-muted, #656d76);
+  text-align: left;
+  cursor: pointer;
+}
+.gct-section:not(.gct-expanded) .gct-section-header:hover {
+  background: var(--bgColor-neutral-muted, rgba(175, 184, 193, 0.2));
+}
+/* The open section's header is inert, so don't advertise a click. */
+.gct-section.gct-expanded .gct-section-header {
+  cursor: default;
+}
+.gct-section-header:focus-visible {
+  outline: 2px solid var(--focus-outlineColor, #0969da);
+  outline-offset: -2px;
 }
 
 .gct-font-list {
+  display: none;
   flex: 1;
   min-height: 0;
   overflow-y: auto;
-  border: 1px solid var(--borderColor-default, #d0d7de);
-  border-radius: 6px;
+  border-bottom: 1px solid var(--borderColor-default, #d0d7de);
+}
+/* The footer's border-top already draws the drawer's bottom line. */
+.gct-section:last-child:not(.gct-expanded) .gct-section-header,
+.gct-section:last-child.gct-expanded .gct-font-list {
+  border-bottom: none;
+}
+.gct-section.gct-expanded .gct-font-list {
+  display: block;
 }
 .gct-font-option {
   display: block;
   width: 100%;
-  padding: 6px 10px;
+  padding: 6px 16px;
   border: none;
   background: transparent;
   color: inherit;
@@ -200,4 +248,77 @@ html[data-gct-font-mono]
 .gct-font-option.gct-selected {
   background: var(--bgColor-accent-muted, #ddf4ff);
   color: var(--fgColor-accent, #0969da);
+}
+
+/* ---------- theme "about" popover (positioned by Popper) ---------- */
+
+.gct-popover {
+  z-index: 2147483602;
+  width: 300px;
+  max-width: 80vw;
+  padding: 12px 14px;
+  border: 1px solid var(--borderColor-default, #d0d7de);
+  border-radius: 8px;
+  background: var(--bgColor-default, #fff);
+  color: var(--fgColor-default, #1f2328);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
+  visibility: hidden;
+  /* Never steals hover from the option it describes. */
+  pointer-events: none;
+}
+.gct-popover.gct-visible {
+  visibility: visible;
+}
+.gct-popover-title {
+  margin: 0 0 6px;
+  font-size: 13px;
+  font-weight: 600;
+}
+.gct-popover-text {
+  margin: 0;
+  font-size: 12px;
+  line-height: 1.5;
+  color: var(--fgColor-muted, #656d76);
+}
+
+.gct-popover-arrow,
+.gct-popover-arrow::before {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+}
+.gct-popover-arrow::before {
+  content: "";
+  transform: rotate(45deg);
+  background: var(--bgColor-default, #fff);
+  border: 1px solid var(--borderColor-default, #d0d7de);
+}
+/* Show only the two arrow borders facing the anchor. */
+.gct-popover[data-popper-placement^="left"] .gct-popover-arrow {
+  right: -5px;
+}
+.gct-popover[data-popper-placement^="left"] .gct-popover-arrow::before {
+  border-left: none;
+  border-bottom: none;
+}
+.gct-popover[data-popper-placement^="right"] .gct-popover-arrow {
+  left: -5px;
+}
+.gct-popover[data-popper-placement^="right"] .gct-popover-arrow::before {
+  border-right: none;
+  border-top: none;
+}
+.gct-popover[data-popper-placement^="top"] .gct-popover-arrow {
+  bottom: -5px;
+}
+.gct-popover[data-popper-placement^="top"] .gct-popover-arrow::before {
+  border-left: none;
+  border-top: none;
+}
+.gct-popover[data-popper-placement^="bottom"] .gct-popover-arrow {
+  top: -5px;
+}
+.gct-popover[data-popper-placement^="bottom"] .gct-popover-arrow::before {
+  border-right: none;
+  border-bottom: none;
 }

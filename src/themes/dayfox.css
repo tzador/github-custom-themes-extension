@@ -1,0 +1,25 @@
+html[data-gct-theme="dayfox"] {
+  --gct-color-scheme: light;
+  --gct-bg: #f6f2ee;
+  --gct-bg-subtle: #efe8e0;
+  --gct-bg-inset: #e4dcd1;
+  --gct-bg-overlay: #faf7f3;
+  --gct-fg: #352c24;
+  --gct-fg-muted: #756c63;
+  --gct-border: #dcd2c6;
+  --gct-accent: #2848a9;
+  --gct-red: #a5222f;
+  --gct-orange: #ac5402;
+  --gct-yellow: #9e7100;
+  --gct-green: #396847;
+  --gct-cyan: #287980;
+  --gct-blue: #2848a9;
+  --gct-purple: #6e33ce;
+  --gct-pink: #a440b5;
+  --gct-syn-comment: #837a72;
+  --gct-syn-keyword: var(--gct-purple);
+  --gct-syn-string: var(--gct-green);
+  --gct-syn-entity: var(--gct-blue);
+  --gct-syn-constant: var(--gct-orange);
+  --gct-syn-tag: var(--gct-blue);
+}

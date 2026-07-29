@@ -1,0 +1,28 @@
+/* Built from the Open Color palette (yeun.github.io/open-color):
+   gray 0-9 surfaces with level-7/8 accent hues. */
+html[data-gct-theme="open-color-light"] {
+  --gct-color-scheme: light;
+  --gct-bg: #ffffff;
+  --gct-bg-subtle: #f8f9fa;
+  --gct-bg-inset: #f1f3f5;
+  --gct-bg-overlay: #ffffff;
+  --gct-fg: #212529;
+  --gct-fg-muted: #868e96;
+  --gct-border: #dee2e6;
+  --gct-accent: #1c7ed6;
+  --gct-accent-emphasis: #1864ab;
+  --gct-red: #e03131;
+  --gct-orange: #e8590c;
+  --gct-yellow: #e67700;
+  --gct-green: #2f9e44;
+  --gct-cyan: #0c8599;
+  --gct-blue: #1c7ed6;
+  --gct-purple: #6741d9;
+  --gct-pink: #c2255c;
+  --gct-syn-comment: #adb5bd;
+  --gct-syn-keyword: var(--gct-purple);
+  --gct-syn-string: var(--gct-green);
+  --gct-syn-entity: var(--gct-blue);
+  --gct-syn-constant: var(--gct-cyan);
+  --gct-syn-tag: var(--gct-pink);
+}

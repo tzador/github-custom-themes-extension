@@ -1,0 +1,26 @@
+html[data-gct-theme="city-lights"] {
+  --gct-color-scheme: dark;
+  --gct-bg: #1d252c;
+  --gct-bg-subtle: #212a33;
+  --gct-bg-inset: #171e24;
+  --gct-bg-overlay: #28323c;
+  --gct-fg: #b7c5d3;
+  --gct-fg-muted: #718ca1;
+  --gct-border: #333f4a;
+  --gct-accent: #5ec4ff;
+  --gct-red: #d95468;
+  --gct-orange: #d98e48;
+  --gct-yellow: #ebbf83;
+  --gct-green: #8bd49c;
+  --gct-cyan: #70e1e8;
+  --gct-blue: #5ec4ff;
+  --gct-purple: #b57edc;
+  --gct-pink: #e27e8d;
+  --gct-syn-comment: #5d7286;
+  --gct-syn-keyword: var(--gct-blue);
+  --gct-syn-string: var(--gct-green);
+  --gct-syn-entity: var(--gct-cyan);
+  --gct-syn-constant: var(--gct-orange);
+  --gct-syn-tag: var(--gct-blue);
+  --gct-syn-heading: var(--gct-blue);
+}
