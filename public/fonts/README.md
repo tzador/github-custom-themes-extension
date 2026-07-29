@@ -31,6 +31,15 @@ fonts). Files from official GitHub repos are full builds.
 | Ubuntu Sans Mono | `ubuntu-sans-mono/` | UFL 1.0 | Google Fonts (variable, +italic) |
 | Sometype Mono | `sometype-mono/` | OFL 1.1 | Google Fonts (variable, +italic) |
 | DM Mono | `dm-mono/` | OFL 1.1 | Google Fonts (static 400/400i/500/500i; 500 serves as bold) |
+| Iosevka | `iosevka/` | OFL 1.1 | fontsource (static 4 styles, subset to latin with pyftsubset) |
+| Maple Mono | `maple-mono/` | OFL 1.1 | github.com/subframe7536/maple-font (static 4 styles) |
+| Fragment Mono | `fragment-mono/` | OFL 1.1 | Google Fonts (static 400/400i only — bold synthesized) |
+| Reddit Mono | `reddit-mono/` | OFL 1.1 | Google Fonts (variable) |
+| Chivo Mono | `chivo-mono/` | OFL 1.1 | Google Fonts (variable, +italic) |
+| Spline Sans Mono | `spline-sans-mono/` | OFL 1.1 | Google Fonts (variable, +italic) |
+| Kode Mono | `kode-mono/` | OFL 1.1 | Google Fonts (variable) |
+| Azeret Mono | `azeret-mono/` | OFL 1.1 | Google Fonts (variable, +italic) |
+| Anonymous Pro | `anonymous-pro/` | OFL 1.1 | Google Fonts (static 4 styles) |
 
 ## Proportional / sans-serif (UI)
 
@@ -54,6 +63,14 @@ fonts). Files from official GitHub repos are full builds.
 | Outfit | `outfit/` | OFL 1.1 | Google Fonts (variable) |
 | Lexend | `lexend/` | OFL 1.1 | Google Fonts (variable) |
 | Instrument Sans | `instrument-sans/` | OFL 1.1 | Google Fonts (variable, +italic) |
+| Hanken Grotesk | `hanken-grotesk/` | OFL 1.1 | Google Fonts (variable, +italic) |
+| Albert Sans | `albert-sans/` | OFL 1.1 | Google Fonts (variable, +italic) |
+| Sora | `sora/` | OFL 1.1 | Google Fonts (variable) |
+| Urbanist | `urbanist/` | OFL 1.1 | Google Fonts (variable, +italic) |
+| Onest | `onest/` | OFL 1.1 | Google Fonts (variable) |
+| Schibsted Grotesk | `schibsted-grotesk/` | OFL 1.1 | Google Fonts (variable, +italic) |
+| Atkinson Hyperlegible Next | `atkinson-hyperlegible-next/` | OFL 1.1 | Google Fonts (variable, +italic) |
+| Bricolage Grotesque | `bricolage-grotesque/` | OFL 1.1 | Google Fonts (variable: opsz+wght) |
 
 ## License notes
 

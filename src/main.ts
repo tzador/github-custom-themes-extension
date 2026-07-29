@@ -4,6 +4,10 @@ import { fonts, type Font } from "./fonts.ts";
 import { themes, type Theme } from "./themes.ts";
 import { createPopper, type Instance } from "@popperjs/core";
 import githubLogoSvg from "@phosphor-icons/core/assets/regular/github-logo.svg?raw";
+import sunSvg from "@phosphor-icons/core/assets/regular/sun.svg?raw";
+import moonSvg from "@phosphor-icons/core/assets/regular/moon.svg?raw";
+import textAaSvg from "@phosphor-icons/core/assets/regular/text-aa.svg?raw";
+import codeSvg from "@phosphor-icons/core/assets/regular/code.svg?raw";
 
 const html = document.documentElement;
 
@@ -185,6 +189,7 @@ const accordionToggles: ((open: boolean) => void)[] = [];
 
 function listSection<T extends Item>(
   label: string,
+  icon: string,
   items: T[],
   api: {
     isSelected: (slug: string) => boolean;
@@ -203,7 +208,14 @@ function listSection<T extends Item>(
   header.className = "gct-section-header";
   header.setAttribute("aria-expanded", "false");
 
-  header.textContent = label;
+  const iconEl = document.createElement("span");
+  iconEl.className = "gct-section-icon";
+  iconEl.innerHTML = icon;
+
+  const labelEl = document.createElement("span");
+  labelEl.textContent = label;
+
+  header.append(iconEl, labelEl);
   title.append(header);
 
   const listEl = document.createElement("div");
@@ -211,16 +223,27 @@ function listSection<T extends Item>(
   // Scrolling moves the hovered option away from the popover's anchor.
   listEl.addEventListener("scroll", hidePopover);
 
-  const options: Item[] = [{ name: "Default", slug: "" }, ...items];
+  const options: Item[] = [
+    { name: "GitHub Default", slug: "" },
+    ...[...items].sort((a, b) => a.name.localeCompare(b.name)),
+  ];
   const buttons: HTMLButtonElement[] = [];
 
-  for (const item of options) {
+  for (const [index, item] of options.entries()) {
     const button = document.createElement("button");
     button.type = "button";
     button.className = "gct-font-option";
     button.dataset.slug = item.slug;
-    button.textContent = item.name;
-    // The synthetic "Default" entry is a plain Item; real entries are T.
+
+    const nameEl = document.createElement("span");
+    nameEl.textContent = item.name;
+
+    const indexEl = document.createElement("span");
+    indexEl.className = "gct-option-index";
+    indexEl.textContent = String(index);
+
+    button.append(nameEl, indexEl);
+    // The synthetic "GitHub Default" entry is a plain Item; real entries are T.
     if (item.slug) api.decorate?.(item as T, button);
 
     button.addEventListener("click", () => {
@@ -290,11 +313,12 @@ function listSection<T extends Item>(
 
 function fontSection(
   label: string,
+  icon: string,
   datasetKey: "gctFontSans" | "gctFontMono",
   storageKey: string,
   list: Font[],
 ): HTMLElement {
-  return listSection(label, list, {
+  return listSection(label, icon, list, {
     isSelected: (slug) => (html.dataset[datasetKey] ?? "") === slug,
     select: (slug) => {
       applyFont(datasetKey, slug);
@@ -302,16 +326,18 @@ function fontSection(
     },
     decorate: (item, button) => {
       button.style.setProperty("font-family", `"${item.name}"`, "important");
+      attachPopover(button, item.name, item.about);
     },
   });
 }
 
 function themeSection(
   label: string,
+  icon: string,
   mode: "light" | "dark",
   list: Theme[],
 ): HTMLElement {
-  return listSection(label, list, {
+  return listSection(label, icon, list, {
     isSelected: (slug) => {
       const current = html.dataset.gctTheme ?? "";
       // "Default" is only highlighted while no theme at all is active, so an
@@ -364,10 +390,22 @@ function injectUi() {
   const body = document.createElement("div");
   body.className = "gct-drawer-body";
   body.append(
-    themeSection("Light themes", "light", themes.light),
-    themeSection("Dark themes", "dark", themes.dark),
-    fontSection("Text font", "gctFontSans", storageKeys.fontSans, fonts.sans),
-    fontSection("Code font", "gctFontMono", storageKeys.fontMono, fonts.mono),
+    themeSection("Light themes", sunSvg, "light", themes.light),
+    themeSection("Dark themes", moonSvg, "dark", themes.dark),
+    fontSection(
+      "Text font",
+      textAaSvg,
+      "gctFontSans",
+      storageKeys.fontSans,
+      fonts.sans,
+    ),
+    fontSection(
+      "Code font",
+      codeSvg,
+      "gctFontMono",
+      storageKeys.fontMono,
+      fonts.mono,
+    ),
   );
   syncSections();
   accordionToggles[0]?.(true);

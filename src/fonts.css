@@ -268,6 +268,105 @@
   font-display: swap;
 }
 
+@font-face {
+  font-family: "Hanken Grotesk";
+  src: url("chrome-extension://__MSG_@@extension_id__/fonts/hanken-grotesk/HankenGrotesk-Var.woff2") format("woff2");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Hanken Grotesk";
+  src: url("chrome-extension://__MSG_@@extension_id__/fonts/hanken-grotesk/HankenGrotesk-Italic-Var.woff2") format("woff2");
+  font-weight: 100 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Albert Sans";
+  src: url("chrome-extension://__MSG_@@extension_id__/fonts/albert-sans/AlbertSans-Var.woff2") format("woff2");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Albert Sans";
+  src: url("chrome-extension://__MSG_@@extension_id__/fonts/albert-sans/AlbertSans-Italic-Var.woff2") format("woff2");
+  font-weight: 100 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Sora";
+  src: url("chrome-extension://__MSG_@@extension_id__/fonts/sora/Sora-Var.woff2") format("woff2");
+  font-weight: 100 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Urbanist";
+  src: url("chrome-extension://__MSG_@@extension_id__/fonts/urbanist/Urbanist-Var.woff2") format("woff2");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Urbanist";
+  src: url("chrome-extension://__MSG_@@extension_id__/fonts/urbanist/Urbanist-Italic-Var.woff2") format("woff2");
+  font-weight: 100 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Onest";
+  src: url("chrome-extension://__MSG_@@extension_id__/fonts/onest/Onest-Var.woff2") format("woff2");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Schibsted Grotesk";
+  src: url("chrome-extension://__MSG_@@extension_id__/fonts/schibsted-grotesk/SchibstedGrotesk-Var.woff2") format("woff2");
+  font-weight: 400 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Schibsted Grotesk";
+  src: url("chrome-extension://__MSG_@@extension_id__/fonts/schibsted-grotesk/SchibstedGrotesk-Italic-Var.woff2") format("woff2");
+  font-weight: 400 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Atkinson Hyperlegible Next";
+  src: url("chrome-extension://__MSG_@@extension_id__/fonts/atkinson-hyperlegible-next/AtkinsonHyperlegibleNext-Var.woff2") format("woff2");
+  font-weight: 200 800;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Atkinson Hyperlegible Next";
+  src: url("chrome-extension://__MSG_@@extension_id__/fonts/atkinson-hyperlegible-next/AtkinsonHyperlegibleNext-Italic-Var.woff2") format("woff2");
+  font-weight: 200 800;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Bricolage Grotesque";
+  src: url("chrome-extension://__MSG_@@extension_id__/fonts/bricolage-grotesque/BricolageGrotesque-Var.woff2") format("woff2");
+  font-weight: 200 800;
+  font-style: normal;
+  font-display: swap;
+}
+
 /* ---------- mono ---------- */
 
 @font-face {
@@ -593,6 +692,170 @@
   font-display: swap;
 }
 
+/* Iosevka ships static latin cuts (the variable build is enormous) */
+@font-face {
+  font-family: "Iosevka";
+  src: url("chrome-extension://__MSG_@@extension_id__/fonts/iosevka/Iosevka-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Iosevka";
+  src: url("chrome-extension://__MSG_@@extension_id__/fonts/iosevka/Iosevka-Italic.woff2") format("woff2");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Iosevka";
+  src: url("chrome-extension://__MSG_@@extension_id__/fonts/iosevka/Iosevka-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Iosevka";
+  src: url("chrome-extension://__MSG_@@extension_id__/fonts/iosevka/Iosevka-BoldItalic.woff2") format("woff2");
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Maple Mono";
+  src: url("chrome-extension://__MSG_@@extension_id__/fonts/maple-mono/MapleMono-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Maple Mono";
+  src: url("chrome-extension://__MSG_@@extension_id__/fonts/maple-mono/MapleMono-Italic.woff2") format("woff2");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Maple Mono";
+  src: url("chrome-extension://__MSG_@@extension_id__/fonts/maple-mono/MapleMono-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Maple Mono";
+  src: url("chrome-extension://__MSG_@@extension_id__/fonts/maple-mono/MapleMono-BoldItalic.woff2") format("woff2");
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Fragment Mono";
+  src: url("chrome-extension://__MSG_@@extension_id__/fonts/fragment-mono/FragmentMono-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Fragment Mono";
+  src: url("chrome-extension://__MSG_@@extension_id__/fonts/fragment-mono/FragmentMono-Italic.woff2") format("woff2");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Reddit Mono";
+  src: url("chrome-extension://__MSG_@@extension_id__/fonts/reddit-mono/RedditMono-Var.woff2") format("woff2");
+  font-weight: 200 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Chivo Mono";
+  src: url("chrome-extension://__MSG_@@extension_id__/fonts/chivo-mono/ChivoMono-Var.woff2") format("woff2");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Chivo Mono";
+  src: url("chrome-extension://__MSG_@@extension_id__/fonts/chivo-mono/ChivoMono-Italic-Var.woff2") format("woff2");
+  font-weight: 100 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Spline Sans Mono";
+  src: url("chrome-extension://__MSG_@@extension_id__/fonts/spline-sans-mono/SplineSansMono-Var.woff2") format("woff2");
+  font-weight: 300 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Spline Sans Mono";
+  src: url("chrome-extension://__MSG_@@extension_id__/fonts/spline-sans-mono/SplineSansMono-Italic-Var.woff2") format("woff2");
+  font-weight: 300 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Kode Mono";
+  src: url("chrome-extension://__MSG_@@extension_id__/fonts/kode-mono/KodeMono-Var.woff2") format("woff2");
+  font-weight: 400 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Azeret Mono";
+  src: url("chrome-extension://__MSG_@@extension_id__/fonts/azeret-mono/AzeretMono-Var.woff2") format("woff2");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Azeret Mono";
+  src: url("chrome-extension://__MSG_@@extension_id__/fonts/azeret-mono/AzeretMono-Italic-Var.woff2") format("woff2");
+  font-weight: 100 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Anonymous Pro";
+  src: url("chrome-extension://__MSG_@@extension_id__/fonts/anonymous-pro/AnonymousPro-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Anonymous Pro";
+  src: url("chrome-extension://__MSG_@@extension_id__/fonts/anonymous-pro/AnonymousPro-Italic.woff2") format("woff2");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Anonymous Pro";
+  src: url("chrome-extension://__MSG_@@extension_id__/fonts/anonymous-pro/AnonymousPro-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Anonymous Pro";
+  src: url("chrome-extension://__MSG_@@extension_id__/fonts/anonymous-pro/AnonymousPro-BoldItalic.woff2") format("woff2");
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
 /* ---------- font selection via data attributes ---------- */
 /* data-gct-font-* values are slugs from fonts.ts */
 
@@ -649,6 +912,30 @@ html[data-gct-font-sans="lexend"] {
 }
 html[data-gct-font-sans="instrument-sans"] {
   --gct-font-sans: "Instrument Sans";
+}
+html[data-gct-font-sans="hanken-grotesk"] {
+  --gct-font-sans: "Hanken Grotesk";
+}
+html[data-gct-font-sans="albert-sans"] {
+  --gct-font-sans: "Albert Sans";
+}
+html[data-gct-font-sans="sora"] {
+  --gct-font-sans: "Sora";
+}
+html[data-gct-font-sans="urbanist"] {
+  --gct-font-sans: "Urbanist";
+}
+html[data-gct-font-sans="onest"] {
+  --gct-font-sans: "Onest";
+}
+html[data-gct-font-sans="schibsted-grotesk"] {
+  --gct-font-sans: "Schibsted Grotesk";
+}
+html[data-gct-font-sans="atkinson-hyperlegible-next"] {
+  --gct-font-sans: "Atkinson Hyperlegible Next";
+}
+html[data-gct-font-sans="bricolage-grotesque"] {
+  --gct-font-sans: "Bricolage Grotesque";
 }
 
 html[data-gct-font-mono="jetbrains-mono"] {
@@ -707,4 +994,31 @@ html[data-gct-font-mono="sometype-mono"] {
 }
 html[data-gct-font-mono="dm-mono"] {
   --gct-font-mono: "DM Mono";
+}
+html[data-gct-font-mono="iosevka"] {
+  --gct-font-mono: "Iosevka";
+}
+html[data-gct-font-mono="maple-mono"] {
+  --gct-font-mono: "Maple Mono";
+}
+html[data-gct-font-mono="fragment-mono"] {
+  --gct-font-mono: "Fragment Mono";
+}
+html[data-gct-font-mono="reddit-mono"] {
+  --gct-font-mono: "Reddit Mono";
+}
+html[data-gct-font-mono="chivo-mono"] {
+  --gct-font-mono: "Chivo Mono";
+}
+html[data-gct-font-mono="spline-sans-mono"] {
+  --gct-font-mono: "Spline Sans Mono";
+}
+html[data-gct-font-mono="kode-mono"] {
+  --gct-font-mono: "Kode Mono";
+}
+html[data-gct-font-mono="azeret-mono"] {
+  --gct-font-mono: "Azeret Mono";
+}
+html[data-gct-font-mono="anonymous-pro"] {
+  --gct-font-mono: "Anonymous Pro";
 }

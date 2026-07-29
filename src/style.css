@@ -187,7 +187,9 @@ html[data-gct-font-mono]
   font-weight: inherit;
 }
 .gct-section-header {
-  display: block;
+  display: flex;
+  align-items: center;
+  gap: 8px;
   width: 100%;
   margin: 0;
   padding: 8px 16px;
@@ -211,6 +213,16 @@ html[data-gct-font-mono]
   outline: 2px solid var(--focus-outlineColor, #0969da);
   outline-offset: -2px;
 }
+.gct-section-icon {
+  display: flex;
+  flex: none;
+  color: var(--fgColor-muted, #656d76);
+}
+.gct-section-icon svg {
+  width: 14px;
+  height: 14px;
+  fill: currentColor;
+}
 
 .gct-font-list {
   display: none;
@@ -228,7 +240,10 @@ html[data-gct-font-mono]
   display: block;
 }
 .gct-font-option {
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
   width: 100%;
   padding: 6px 16px;
   border: none;
@@ -237,6 +252,15 @@ html[data-gct-font-mono]
   font-size: 14px;
   text-align: left;
   cursor: pointer;
+}
+/* Keeps its own monospace stack even when the option previews a font. */
+.gct-option-index {
+  flex: none;
+  font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas,
+    monospace;
+  font-size: 11px;
+  color: var(--fgColor-muted, #656d76);
+  opacity: 0.6;
 }
 .gct-font-option:hover {
   background: var(--bgColor-neutral-muted, rgba(175, 184, 193, 0.2));
