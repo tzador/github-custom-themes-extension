@@ -36,7 +36,7 @@ function syncManifestVersion(): Plugin {
 export default defineConfig({
   plugins: [syncManifestVersion()],
   build: {
-    outDir: "dist",
+    outDir: "dist/github-custom-themes-extension",
     emptyOutDir: true,
     cssCodeSplit: false,
     rollupOptions: {

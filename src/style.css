@@ -19,7 +19,14 @@ html[data-gct-font-sans] {
 }
 
 html[data-gct-font-sans]
-  :is(body, button, input, select, textarea, .markdown-body) {
+  :is(
+    body,
+    button,
+    input,
+    select,
+    textarea:not([data-testid="read-only-cursor-text-area"]),
+    .markdown-body
+  ) {
   font-family:
     var(--gct-font-sans),
     -apple-system,
@@ -50,6 +57,7 @@ html[data-gct-font-mono]
     .blob-num,
     .react-code-text,
     .react-file-line,
+    [data-testid="read-only-cursor-text-area"],
     .cm-content,
     .CodeMirror,
     .file-editor-textarea,

@@ -4,9 +4,8 @@
   "version": "0.0.2",
   "type": "module",
   "scripts": {
-    "dev": "vite",
     "build": "tsc && vite build",
-    "preview": "vite preview"
+    "pack": "./scripts/pack.sh"
   },
   "devDependencies": {
     "@phosphor-icons/core": "^2.1.1",
