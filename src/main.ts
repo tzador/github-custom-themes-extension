@@ -90,9 +90,9 @@ function applyTheme(slug: string, mode: "light" | "dark") {
   }
 }
 
-function restoreTheme() {
+function storedTheme(): { slug: string; mode: "light" | "dark" } | null {
   const stored = readStored(storageKeys.theme);
-  if (!stored) return;
+  if (!stored) return null;
   try {
     const { slug, mode } = JSON.parse(stored) as {
       slug?: unknown;
@@ -103,11 +103,17 @@ function restoreTheme() {
       (mode === "light" || mode === "dark") &&
       themes[mode].some((theme) => theme.slug === slug)
     ) {
-      applyTheme(slug, mode);
+      return { slug, mode };
     }
   } catch {
     /* ignore corrupt value */
   }
+  return null;
+}
+
+function restoreTheme() {
+  const stored = storedTheme();
+  if (stored) applyTheme(stored.slug, stored.mode);
 }
 
 restoreTheme();
@@ -184,6 +190,10 @@ function attachPopover(button: HTMLButtonElement, name: string, about: string) {
 const sectionSyncs: (() => void)[] = [];
 const syncSections = () => sectionSyncs.forEach((sync) => sync());
 
+// Undo any in-flight hover preview (e.g. when the drawer closes mid-hover).
+const previewRestores: (() => void)[] = [];
+const restorePreviews = () => previewRestores.forEach((restore) => restore());
+
 // One entry per accordion section, so opening one can collapse the rest.
 const accordionToggles: ((open: boolean) => void)[] = [];
 
@@ -194,6 +204,10 @@ function listSection<T extends Item>(
   api: {
     isSelected: (slug: string) => boolean;
     select: (slug: string) => void;
+    // Hovering an option applies it immediately; leaving re-applies the
+    // stored selection. Neither touches persistence.
+    preview: (slug: string) => void;
+    restore: () => void;
     decorate?: (item: T, button: HTMLButtonElement) => void;
   },
 ): HTMLElement {
@@ -246,6 +260,9 @@ function listSection<T extends Item>(
     // The synthetic "GitHub Default" entry is a plain Item; real entries are T.
     if (item.slug) api.decorate?.(item as T, button);
 
+    button.addEventListener("mouseenter", () => api.preview(item.slug));
+    button.addEventListener("mouseleave", api.restore);
+
     button.addEventListener("click", () => {
       api.select(item.slug);
       syncSections();
@@ -254,6 +271,8 @@ function listSection<T extends Item>(
     buttons.push(button);
     listEl.append(button);
   }
+
+  previewRestores.push(api.restore);
 
   sectionSyncs.push(() => {
     for (const button of buttons) {
@@ -317,6 +336,7 @@ function fontSection(
   datasetKey: "gctFontSans" | "gctFontMono",
   storageKey: string,
   list: Font[],
+  fallback: string,
 ): HTMLElement {
   return listSection(label, icon, list, {
     isSelected: (slug) => (html.dataset[datasetKey] ?? "") === slug,
@@ -324,6 +344,8 @@ function fontSection(
       applyFont(datasetKey, slug);
       writeStored(storageKey, slug);
     },
+    preview: (slug) => applyFont(datasetKey, slug),
+    restore: () => restoreFont(datasetKey, storageKey, list, fallback),
     decorate: (item, button) => {
       button.style.setProperty("font-family", `"${item.name}"`, "important");
       attachPopover(button, item.name, item.about);
@@ -350,6 +372,12 @@ function themeSection(
         storageKeys.theme,
         slug ? JSON.stringify({ slug, mode }) : null,
       );
+    },
+    preview: (slug) => applyTheme(slug, mode),
+    restore: () => {
+      const stored = storedTheme();
+      if (stored) applyTheme(stored.slug, stored.mode);
+      else applyTheme("", mode);
     },
     decorate: (item, button) => {
       attachPopover(button, item.name, item.about);
@@ -398,6 +426,7 @@ function injectUi() {
       "gctFontSans",
       storageKeys.fontSans,
       fonts.sans,
+      "mona-sans",
     ),
     fontSection(
       "Code font",
@@ -405,6 +434,7 @@ function injectUi() {
       "gctFontMono",
       storageKeys.fontMono,
       fonts.mono,
+      "monaspace-neon",
     ),
   );
   syncSections();
@@ -430,7 +460,12 @@ function injectUi() {
 
   const setOpen = (open: boolean) => {
     drawer.classList.toggle("gct-open", open);
-    if (!open) hidePopover();
+    // Closing can leave a hover preview active without a mouseleave (e.g.
+    // Escape while the cursor sits on an option) — snap back to the selection.
+    if (!open) {
+      hidePopover();
+      restorePreviews();
+    }
   };
 
   button.addEventListener("click", () => {
